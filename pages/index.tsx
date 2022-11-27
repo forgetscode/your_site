@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           quality={100}                
       />
       <div className="flex items-center justify-center z-10 h-screen w-screen">
-        <div className="flex-col z-10 space-y-3 md:space-y-6">
+        <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6">
           <p className="text-white font-bold text-2xl md:text-3xl lg:text-6xl z-10">
             Michael Gergely
           </p>

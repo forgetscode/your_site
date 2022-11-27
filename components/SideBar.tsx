@@ -26,17 +26,17 @@ const SideBar = () => {
     
     useEffect(() => {
         setShowSideBar(!showSideBar);
-        if (window.innerWidth >= 1450) {
+        if (window.innerWidth >= 1024) {
           setShowSideBar(true);
         } else {
           setShowSideBar(false);
         }
     
         const updateMedia = () => {
-          if (window.innerWidth >= 1450) {
+          if (window.innerWidth >= 1024) {
             setShowSideBar(true);
           } else {
-            setShowSideBar(true);
+            setShowSideBar(false);
           }
         };
         window.addEventListener('resize', updateMedia);
@@ -132,7 +132,7 @@ const SideBar = () => {
             </p>
         </div>
 
-        <button onClick = {()=> setShowSideBar(!showSideBar)} className="absolute z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full right-6 top-6 w-10 h-10 md:scale-0 text-center">
+        <button onClick = {()=> setShowSideBar(!showSideBar)} className="absolute z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full right-6 top-6 w-10 h-10 lg:scale-0 text-center">
           {showSideBar ? <Tooltip title="Close"><ClearIcon className="text-white"/></Tooltip>: <Tooltip title="Open"><DensityMediumIcon className="text-white"/></Tooltip>}
        </button>
     </header>
