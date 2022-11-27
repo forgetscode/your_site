@@ -39,13 +39,13 @@ const Home: NextPage = () => {
           quality={100}                
       />
       <div className="flex items-center justify-center z-10 h-screen w-screen">
-        <div className="flex-col z-10 space-y-6">
+        <div className="flex-col z-10 space-y-3 md:space-y-6">
           <p className="text-white font-bold text-2xl md:text-3xl lg:text-6xl z-10">
             Michael Gergely
           </p>
           <div className="flex flex-row">
-            <p className="text-white font-semibold text-xl lg:text-3xl z-10 pr-3">
-              I'm a 
+            <p className="text-white font-semibold text-xl lg:text-3xl z-10 pr-2 md:pr-3">
+              {"I'm a"}
             </p>
             <Typed
               className="text-white text-xl lg:text-3xl z-10 font-semibold decoration-sky-400 underline underline-offset-8 lg:underline-offset-[16px]"

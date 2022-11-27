@@ -119,8 +119,8 @@ const SideBar = () => {
                 </div>
             </div>
 
-            <p className="absolute z-10 bottom-3 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-white opacity-80 text-sm ">
-                <CopyrightOutlinedIcon className="scale-75 opacity-80 pb-1"/>
+            <p className="absolute z-10 scale-0 lg:scale-100 bottom-3 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-white opacity-80 text-sm ">
+                <CopyrightOutlinedIcon className="scale-0 md:scale-75 opacity-80 pb-1"/>
                 Michael Gergely
             </p>
         </div>
