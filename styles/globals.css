@@ -4,18 +4,30 @@
 
 @layer components {
     .light-text{
-        @apply text-blue-600
+        @apply text-sky-500
     }
 
     .dark-text{
         @apply text-white
     }
 
-    .dark-bg{
-        @apply bg-black
+    .dark-theme{
+        @apply bg-sky-500
     }
 
-    .light-bg{
-        @apply bg-white
+    .light-theme{
+        @apply bg-slate-500
+    }
+
+    .social-icon{
+        @apply bg-gray-600 dark:bg-gray-900 text-white rounded-full h-10 w-10 text-center text-sm p-2 hover:bg-sky-500 dark:hover:bg-sky-600
+    }
+
+    .id-icon{
+        @apply bg-white dark:bg-black text-gray-600 group-hover:text-sky-600 scale-110 transition-all duration-500
+    }
+
+    .id-text{
+        @apply dark:text-gray-600 group-hover:text-sky-500 dark:group-hover:text-white font-semibold transition-all duration-500
     }
   }

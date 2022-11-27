@@ -8,8 +8,8 @@ const Header = () => {
     return (
     <header className={`${mode === "dark" ? 'dark' : ''}`}>
         <div className="w-full">
-            <div className="w-full flex h-20 items-center justify-between px-8 light-bg light-text dark:dark-bg dark:dark-text font-bold sm:text-md md:text-lg lg:text-4xl border-b shadow-lg ">
-                <AccessibilityNewIcon fontSize="large" className="dark:dark-text"/>
+            <div className="w-full flex h-20 items-center justify-between px-8 light-bg  dark:dark-bg font-bold sm:text-md md:text-lg lg:text-4xl border-b shadow-lg ">
+                <AccessibilityNewIcon fontSize="large"/>
                 hey dawg hey whatsup
                 <Toggle/>
             </div>

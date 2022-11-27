@@ -5,7 +5,7 @@ import { ColorModeContextProvider } from '../context/ColorModeContext'
 function MyApp({ Component, pageProps }: AppProps) {
   return(
     <ColorModeContextProvider>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </ColorModeContextProvider>
   );
 }

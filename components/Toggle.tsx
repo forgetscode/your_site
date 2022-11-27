@@ -15,7 +15,7 @@ export default function Toggle() {
     return (
         <FormControlLabel
         control ={<Switch {...label} defaultChecked onChange={() => toggleColorMode()} />}
-        label = {mode ==="dark" ? <DarkModeIcon/> : <WbSunnyIcon/>}
+        label = {mode ==="dark" ? <DarkModeIcon className='text-white'/> : <WbSunnyIcon className='text-black'/>}
         />
     );
   }
