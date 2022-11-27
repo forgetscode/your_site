@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       <SideBar/>
       <Image
           className="absolute "
-          src="https://w.wallha.com/ws/14/FWz4P6nt.jpg"
+          src="https://www.zbrushcentral.com/uploads/default/optimized/4X/0/0/e/00eabc32bcfdb173e61a62d2803a5e5aa846e9db_2_1800x1800.jpeg"
           alt=""
           layout="fill"
           objectFit="cover"
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             </p>
             <Typed
               className="text-white text-xl lg:text-3xl z-10 font-semibold decoration-sky-400 underline underline-offset-8 lg:underline-offset-[16px]"
-              strings={['Front-end Developer.', 'Back-End Developer', 'Blockchain-Developer', 'Web Developer']} typeSpeed={100} backSpeed={100} loop
+              strings={['Front-end Developer.', 'Back-End Developer.', 'Blockchain-Developer.', 'Web Developer.']} typeSpeed={100} backSpeed={100} loop
             />
           </div>
         </div>

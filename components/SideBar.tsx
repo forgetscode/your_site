@@ -47,7 +47,14 @@ const SideBar = () => {
     return (
     <header className={`${mode === "dark" ? 'dark' : ''}`}>
 
-        <div className={`fixed z-20 space-y-8 h-full w-72 light-theme bg-white dark:dark-theme dark:bg-black origin-left transition-all duration-500 ${showSideBar ?"ml-0" : "-ml-72 "}`}>
+        <div className={`fixed z-20 space-y-8 h-full w-72 light-theme bg-white dark:dark-theme 
+        dark:bg-gradient-to-r 
+        from-gray-900
+        to-black
+        via-gray-800
+        animate-gradient-x
+        
+        origin-left transition-all duration-500 ${showSideBar ?"ml-0" : "-ml-72 "}`}>
             
             <Tooltip title="Theme" placement="right">
                 <div className="absolute z-10 right-2">
@@ -94,8 +101,8 @@ const SideBar = () => {
 
             <div className = "flex z-10 flex-col pt-2 space-y-8">
                 <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                        <HomeOutlinedIcon className="id-icon"/>
-                        <p className="id-text">Home</p>
+                        <HomeOutlinedIcon className="id-icon text-sky-500"/>
+                        <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Home</p>
                 </div>
                 <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
                     <PersonOutlineOutlinedIcon className="id-icon"/>
@@ -125,7 +132,7 @@ const SideBar = () => {
             </p>
         </div>
 
-        <button onClick = {()=> setShowSideBar(!showSideBar)} className="absolute z-10 light-theme dark:dark-theme rounded-full right-6 top-6 w-10 h-10 md:scale-0 text-center">
+        <button onClick = {()=> setShowSideBar(!showSideBar)} className="absolute z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full right-6 top-6 w-10 h-10 md:scale-0 text-center">
           {showSideBar ? <Tooltip title="Close"><ClearIcon className="text-white"/></Tooltip>: <Tooltip title="Open"><DensityMediumIcon className="text-white"/></Tooltip>}
        </button>
     </header>

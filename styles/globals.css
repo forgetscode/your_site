@@ -24,10 +24,10 @@
     }
 
     .id-icon{
-        @apply bg-white dark:bg-black text-gray-600 group-hover:text-sky-600 scale-110 transition-all duration-500
+        @apply bg-white dark:bg-black text-gray-400 group-hover:text-sky-500 scale-110 transition-all duration-500 bg-clip-text
     }
 
     .id-text{
-        @apply dark:text-gray-600 group-hover:text-sky-500 dark:group-hover:text-white font-semibold transition-all duration-500
+        @apply dark:text-gray-400 group-hover:text-sky-500 dark:group-hover:text-white font-semibold transition-all duration-500
     }
   }
