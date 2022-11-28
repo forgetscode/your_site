@@ -9,19 +9,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
-import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
-import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
-
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
+import SectionSpan from "./SectionSpan";
 
 const SideBar = () => {
     const { mode } = useColorMode()
-    const [showSideBar, setShowSideBar] = useState<Boolean>(true);
+    const [showSideBar, setShowSideBar ] = useState<Boolean>(true);
 
     
     useEffect(() => {
@@ -99,32 +92,7 @@ const SideBar = () => {
                 </Tooltip>
             </div>
 
-            <div className = "flex z-10 flex-col pt-2 space-y-8">
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                        <HomeOutlinedIcon className="id-icon text-sky-500"/>
-                        <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Home</p>
-                </div>
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                    <PersonOutlineOutlinedIcon className="id-icon"/>
-                    <p className="id-text">About</p>
-                </div>
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                    <DescriptionOutlinedIcon className="id-icon"/>
-                    <p className="id-text">Resume</p>
-                </div>
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                    <BusinessCenterOutlinedIcon className="id-icon"/>
-                    <p className="id-text">Portfolio</p>
-                </div>
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                    <EngineeringOutlinedIcon className="id-icon"/>
-                    <p className="id-text">Services</p>
-                </div>
-                <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
-                    <MailOutlinedIcon  className="id-icon"/>
-                    <p className="id-text">Contact</p>
-                </div>
-            </div>
+            <SectionSpan/>
 
             <p className="absolute z-10 scale-0 lg:scale-100 bottom-3 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-white opacity-80 text-sm ">
                 <CopyrightOutlinedIcon className="scale-0 md:scale-75 opacity-80 pb-1"/>
@@ -132,7 +100,7 @@ const SideBar = () => {
             </p>
         </div>
 
-        <button onClick = {()=> setShowSideBar(!showSideBar)} className="absolute z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full right-6 top-6 w-10 h-10 lg:scale-0 text-center">
+        <button onClick = {()=> setShowSideBar(!showSideBar)} className="fixed z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full right-6 top-6 w-10 h-10 lg:scale-0 text-center">
           {showSideBar ? <Tooltip title="Close"><ClearIcon className="text-white"/></Tooltip>: <Tooltip title="Open"><DensityMediumIcon className="text-white"/></Tooltip>}
        </button>
     </header>
