@@ -101,7 +101,7 @@ const Home: NextPage = () => {
         <link rel='icon' href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vsmart_logo.svg/402px-Vsmart_logo.svg.png?20200810165214"/>
       </Head>
       <SideBar/>
-      <div id = {"Home"}/>
+      <div id = {"Home"} className="absolute top-0"/>
       <div  className="fixed -z-30 dark:bg-black dark:opacity-90 h-screen w-full">
         <Image
             className="absolute dark:opacity-80"

@@ -12,7 +12,7 @@
     }
 
     .dark-theme{
-        @apply bg-sky-500
+        @apply bg-gray-600
     }
 
     .light-theme{
@@ -24,7 +24,7 @@
     }
 
     .span-button-active{
-        @apply flex flex-row space-x-3 ml-6 cursor-pointer p-2 bg-gray-300 dark:bg-black dark:bg-opacity-30 rounded-lg w-60 transition-all delay-[300ms]
+        @apply flex flex-row space-x-3 ml-6 cursor-pointer p-2 bg-gray-100 dark:bg-black dark:bg-opacity-30 rounded-lg w-60 transition-all delay-[150ms]
     }
 
     .span-button-inactive{
