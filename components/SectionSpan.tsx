@@ -23,16 +23,16 @@ const SectionSpan = () => {
 
     return (
     <header className={`${mode === "dark" ? 'dark' : ''}`}>
-        <div className = "flex z-10 flex-col pt-2 space-y-8">
+        <div className = "flex z-10 flex-col pt-2 space-y-6">
                 <button onClick = { ()=> {setSelected("Home"), setActiveScroll("Home")}}>
                 {
                     activeScroll == "Home" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <HomeOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Home</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <HomeOutlinedIcon className="id-icon"/>
                         <p className="id-text">Home</p>
                     </div>
@@ -41,12 +41,12 @@ const SectionSpan = () => {
                 <button onClick = { ()=> {setSelected("About"), setActiveScroll("About")}}>
                 {
                     activeScroll == "About" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <PersonOutlineOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">About</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <PersonOutlineOutlinedIcon className="id-icon"/>
                         <p className="id-text">About</p>
                     </div>
@@ -55,12 +55,12 @@ const SectionSpan = () => {
                 <button onClick = { ()=> {setSelected("Resume"), setActiveScroll("Resume")}}>
                 {
                     activeScroll == "Resume" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <DescriptionOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Resume</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <DescriptionOutlinedIcon className="id-icon"/>
                         <p className="id-text">Resume</p>
                     </div>
@@ -69,12 +69,12 @@ const SectionSpan = () => {
                 <button onClick = { ()=> {setSelected("Portfolio"), setActiveScroll("Portfolio")}}>
                 {
                     activeScroll == "Portfolio" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <BusinessCenterOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Portfolio</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <BusinessCenterOutlinedIcon className="id-icon"/>
                         <p className="id-text">Portfolio</p>
                     </div>
@@ -83,12 +83,12 @@ const SectionSpan = () => {
                 <button onClick = { ()=> {setSelected("Services"), setActiveScroll("Services")}}>
                 {
                     activeScroll == "Services" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <EngineeringOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Services</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <EngineeringOutlinedIcon className="id-icon"/>
                         <p className="id-text">Services</p>
                     </div>
@@ -97,12 +97,12 @@ const SectionSpan = () => {
                 <button onClick = { ()=> {setSelected("Contact"), setActiveScroll("Contact")}}>
                 {
                     activeScroll == "Contact" ?
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-active group">
                         <MailOutlinedIcon className="id-icon text-sky-500"/>
                         <p className="text-sky-500 font-semibold transition-all duration-500 dark:text-white">Contact</p>
                     </div>
                     :
-                    <div className="flex flex-row space-x-3 ml-8 group cursor-pointer">
+                    <div className="span-button-inactive group">
                         <MailOutlinedIcon className="id-icon"/>
                         <p className="id-text">Contact</p>
                     </div>

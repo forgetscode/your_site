@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import ClearIcon from '@mui/icons-material/Clear';
 import Image from 'next/image'
-import { Tooltip } from "@mui/material";
+import { StyledEngineProvider, Tooltip } from "@mui/material";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -15,7 +15,20 @@ import SectionSpan from "./SectionSpan";
 const SideBar = () => {
     const { mode } = useColorMode()
     const [showSideBar, setShowSideBar ] = useState<Boolean>(true);
+    const [ image, setImage ] = useState(1)
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if(image == 4){
+                setImage(1)
+            }
+            else{
+                setImage(image + 1)
+            }
+        }, 3000)
+        
+        return () => clearInterval(interval)
+    }, [image]);
     
     useEffect(() => {
         setShowSideBar(!showSideBar);
@@ -57,12 +70,37 @@ const SideBar = () => {
 
             <div className="w-full flex flex-col justify-center items-center space-y-6 pt-3">
                 <div className="relative w-32 h-32 rounded-full border-4 border-sky-200 dark:border-gray-700">
-                        <Image
-                            className="rounded-full"
-                            src="https://www.zbrushcentral.com/uploads/default/optimized/4X/0/0/e/00eabc32bcfdb173e61a62d2803a5e5aa846e9db_2_1800x1800.jpeg"
-                            alt=""
-                            layout="fill"
-                        />
+                    
+                        { 
+                            image == 1 ? 
+                            <Image
+                                className="rounded-full transition-all"
+                                src="/pic1.png"
+                                alt=""
+                                layout="fill"
+                            />
+                            : image == 2 ?
+                            <Image
+                                className="rounded-full transition-all"
+                                src="/pic2.png"
+                                alt=""
+                                layout="fill"
+                            />
+                            : image == 3 ?
+                            <Image
+                                className="rounded-full transition-all"
+                                src="/pic3.png"
+                                alt=""
+                                layout="fill"
+                            />
+                            : 
+                            <Image
+                                className="rounded-full transition-all"
+                                src="/pic4.png"
+                                alt=""
+                                layout="fill"
+                            />
+                        }
                 </div>
                 <p className="text-2xl light-text dark:dark-text font-bold ">
                     Michael Gergely
