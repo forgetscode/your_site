@@ -10,6 +10,7 @@ import { NextPage } from "next";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Tooltip } from "@mui/material";
 import { useScroll } from "../context/ActiveScroll";
+import AboutInfo from "../components/AboutInfo";
 
 const getOffSet = (id:string) => {
   const offset = document.getElementById(id)?.offsetHeight
@@ -35,7 +36,7 @@ const Home: NextPage = () => {
 
   const updateMedia = () => {
     sections.Home = getOffSet("Home")
-    sections.About = getOffSet("About") 
+    sections.About = getOffSet("About") + sections.Home
     sections.Resume = getOffSet("Resume") + sections.About
     sections.Portfolio = getOffSet("Portfolio") + sections.Resume
     sections.Services = getOffSet("Services") + sections.Portfolio
@@ -85,6 +86,7 @@ const Home: NextPage = () => {
         window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
 
   if (loading){
     return(
@@ -137,24 +139,23 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      
+      <AboutInfo/>
 
-      <div id = {"About"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
-        About
-      </div>
 
-      <div id = {"Resume"} className="h-screen w-full flex justify-center items-center text-3xl bg-white">
+      <div id = {"Resume"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
         Resume
       </div>
 
-      <div id = {"Portfolio"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
+      <div id = {"Portfolio"} className="h-screen w-full flex justify-center items-center text-3xl  bg-white">
         Portfolio
       </div>
 
-      <div id = {"Services"} className="h-screen w-full flex justify-center items-center text-3xl bg-white">
+      <div id = {"Services"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
         Services
       </div>
 
-      <div id = {"Contact"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
+      <div id = {"Contact"} className="h-screen w-full flex justify-center items-center text-3xl bg-white">
         Contact
       </div>
 

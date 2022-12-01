@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import ClearIcon from '@mui/icons-material/Clear';
 import Image from 'next/image'
-import { StyledEngineProvider, Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -59,6 +59,7 @@ const SideBar = () => {
         to-black
         via-gray-800
         animate-gradient-x
+        bg-opacity-80
         
         origin-left transition-all duration-500 ${showSideBar ?"ml-0" : "-ml-72 "}`}>
             
@@ -133,7 +134,7 @@ const SideBar = () => {
             <SectionSpan/>
 
             <p className="absolute z-10 scale-0 lg:scale-100 bottom-3 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-white opacity-80 text-sm ">
-                <CopyrightOutlinedIcon className="scale-0 md:scale-75 opacity-80 pb-1"/>
+                <CopyrightOutlinedIcon className="scale-0 md:scale-75 opacity-80 pb-1 min-h-min"/>
                 Michael Gergely
             </p>
         </div>
