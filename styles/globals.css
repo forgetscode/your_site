@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @layer components {
     .light-text{
@@ -9,6 +10,29 @@
 
     .dark-text{
         @apply text-white
+    }
+    .header-text{
+        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-slate-600
+    }
+
+    .dark-header-text{
+        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-slate-600
+    }
+
+    .sub-header-text{
+        @apply font-poppins font-medium leading-tight text-3xl text-sky-800
+    }
+
+    .dark-sub-header-text{
+        @apply font-poppins font-medium leading-tight text-3xl text-sky-800
+    }
+
+    .body-text {
+        @apply font-poppins text-black 
+    }
+
+    .dark-body-text {
+        @apply font-poppins text-black
     }
 
     .dark-theme{

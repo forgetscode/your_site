@@ -17,7 +17,7 @@ const SectionSpan = () => {
   
     useEffect(()=> {
       const element = document.getElementById(selected)
-      element?.scrollIntoView({behavior: "smooth" , block: "center"})
+      element?.scrollIntoView({behavior: "smooth" , block: "start"})
     }, [selected]);
   
 

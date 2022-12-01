@@ -1,16 +1,15 @@
 
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import LoadingSpinner from "../components/LoadingSpinner";
 import SideBar from "../components/SideBar";
 import { useColorMode } from "../context/ColorModeContext";
 import Image from 'next/image'
-import Typed from 'react-typed';
 import { NextPage } from "next";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Tooltip } from "@mui/material";
 import { useScroll } from "../context/ActiveScroll";
 import AboutInfo from "../components/AboutInfo";
+import FadeInHomeText from "../components/FadeInHomeText";
 
 const getOffSet = (id:string) => {
   const offset = document.getElementById(id)?.offsetHeight
@@ -22,7 +21,6 @@ const getOffSet = (id:string) => {
 
 const Home: NextPage = () => {
   const { mode } = useColorMode()
-  const [ loading, setLoading ] = useState(false);
   const [ isScrolled, setIsScrolled]  = useState(false)
   const { setActiveScroll } = useScroll()
   const [ sections, setSections ] = useState({
@@ -35,12 +33,12 @@ const Home: NextPage = () => {
   })
 
   const updateMedia = () => {
-    sections.Home = getOffSet("Home")
-    sections.About = getOffSet("About") + sections.Home
-    sections.Resume = getOffSet("Resume") + sections.About
-    sections.Portfolio = getOffSet("Portfolio") + sections.Resume
-    sections.Services = getOffSet("Services") + sections.Portfolio
-    sections.Contact = getOffSet("Contact") + sections.Services
+    sections.Home = 0
+    sections.About = getOffSet("Home")
+    sections.Resume = getOffSet("About") + sections.About
+    sections.Portfolio = getOffSet("Resume") + sections.Resume
+    sections.Services = getOffSet("Portfolio") + sections.Portfolio
+    sections.Contact = getOffSet("Services") + sections.Services
   };
 
   useEffect(() => {
@@ -52,6 +50,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = window.scrollY
+      console.log("height: ", scrollHeight, "About: ", sections.About , "Resume: ", sections.Resume)
         if (scrollHeight > 0) {
             setIsScrolled(true)
         } else {
@@ -72,7 +71,7 @@ const Home: NextPage = () => {
         else if(scrollHeight >= sections.Resume -150){
           setActiveScroll("Resume")
         }
-        else if(scrollHeight >= sections.About -150){
+        else if(scrollHeight >= sections.About -500){
           setActiveScroll("About")
         }
         else{
@@ -87,15 +86,6 @@ const Home: NextPage = () => {
     }
   }, [])
 
-
-  if (loading){
-    return(
-      <div className="h-screen w-screen flex items-center justify-center bg-black">
-          <LoadingSpinner/>
-      </div>
-    )
-  }
-
   return (
     <div className={`${mode === "dark" ? 'dark' : ''}`}>
       <Head>
@@ -103,7 +93,7 @@ const Home: NextPage = () => {
         <link rel='icon' href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vsmart_logo.svg/402px-Vsmart_logo.svg.png?20200810165214"/>
       </Head>
       <SideBar/>
-      <div id = {"Home"} className="absolute top-0"/>
+      <div id = {"Home"} className="absolute h-screen top-0"/>
       <div  className="fixed -z-30 dark:bg-black dark:opacity-90 h-screen w-full">
         <Image
             className="absolute dark:opacity-80"
@@ -114,6 +104,7 @@ const Home: NextPage = () => {
             quality={100}                
         />
       </div>
+
       { isScrolled ?
           <button className="fixed transition-all z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full w-10 h-10  right-5 bottom-5 text-center cursor-pointer"
               onClick={()=>document.getElementById("Home")?.scrollIntoView({behavior: "smooth" , block: "center"})}>
@@ -123,25 +114,9 @@ const Home: NextPage = () => {
               <></>
                     
       }
-      <div className="flex items-center justify-center z-10 h-screen w-full">
-        <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6">
-          <p className="text-white font-bold text-2xl md:text-5xl lg:text-7xl z-10">
-            Michael Gergely
-          </p>
-          <div className="flex flex-row">
-            <p className="text-white font-semibold text-xl lg:text-3xl z-10 pr-2 lg:pr-3">
-              {"I'm a"}
-            </p>
-            <Typed
-              className="text-white text-xl lg:text-3xl z-10 font-semibold decoration-sky-400 underline underline-offset-8 lg:underline-offset-[16px]"
-              strings={['Front-end Developer.', 'Back-End Developer.', 'Blockchain-Developer.', 'Web Developer.']} typeSpeed={100} backSpeed={100} loop
-            />
-          </div>
-        </div>
-      </div>
-      
-      <AboutInfo/>
+      <FadeInHomeText/>
 
+      <AboutInfo/>
 
       <div id = {"Resume"} className="h-screen w-full flex justify-center items-center text-3xl text-white bg-black">
         Resume

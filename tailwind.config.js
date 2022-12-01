@@ -8,6 +8,9 @@ module.exports = {
 
   theme: {
     extend: {
+        fontFamily: {
+            'poppins': ['Poppins'],
+         },
           'animation': {
               'gradient-x':'gradient-x 15s ease infinite',
               'gradient-y':'gradient-y 15s ease infinite',
@@ -43,7 +46,7 @@ module.exports = {
                       'background-size':'200% 200%',
                       'background-position': 'right center'
                   }
-              }
+              },
           }
       }
   }
