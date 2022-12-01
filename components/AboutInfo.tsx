@@ -150,26 +150,26 @@ const AboutInfo = () => {
                     <div className="w-full flex justify-center pb-32">
                         <div className='flex justify-between flex-col space-y-10 md:space-y-0 md:flex-row lg:space-x-20 pt-16'>
 
-                            <div className='flex flex-col body-text dark:dark-body-text text-center space-y-3 w-36'>
-                                <GitHubIcon className="text-sky-600 h-16 w-36"/>
+                            <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
+                                <GitHubIcon className="text-sky-600 h-16 w-16"/>
                                 <p className='font-semibold text-3xl'>271</p>
                                 <p className='font-bold body-text dark:body-text'> Github contributions</p>
                                 <p className='body-text dark:body-text'> in 2022.</p>
                             </div>
-                            <div className='flex flex-col body-text dark:dark-body-text text-center space-y-3 w-36'>
-                                <SportsEsportsIcon className="text-sky-600 h-16  w-36"/>
+                            <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
+                                <SportsEsportsIcon className="text-sky-600 h-16 w-16"/>
                                 <p className='font-semibold text-3xl'>2</p>
-                                <p className='font-bold body-text dark:body-text w-36'> Time Diamond League of Legends player</p>
+                                <p className='font-bold body-text dark:body-text'> Time Diamond League of Legends player</p>
                                 <p className='body-text dark:body-text'>in 2016, and 2018.</p>
                             </div>
-                            <div className='flex flex-col body-text dark:dark-body-text text-center space-y-3 w-36'>
-                                <CalculateIcon className="text-sky-600 h-16  w-36"/>
+                            <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
+                                <CalculateIcon className="text-sky-600 h-16 w-16"/>
                                 <p className='font-semibold text-3xl'>A+</p>
                                 <p className='font-bold body-text dark:body-text'> Calculus 101 </p>
                                 <p className='body-text dark:body-text'>at SFU.</p>
                             </div>
-                            <div className='flex flex-col body-text dark:dark-body-text text-center space-y-3 w-36'>
-                                <FoodBankIcon className="text-sky-600 h-16  w-36"/>
+                            <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
+                                <FoodBankIcon className="text-sky-600 h-16 w-16"/>
                                 <p className='font-semibold text-3xl'>Solo</p>
                                 <p className='font-bold body-text dark:body-text'>Large Pizza </p>
                                 <p className='body-text dark:body-text'>in one sitting this one time. Maybe twice.</p>
