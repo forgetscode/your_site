@@ -19,6 +19,10 @@
         @apply font-medium leading-tight text-4xl mt-0 mb-2 text-slate-600
     }
 
+    .header-text-blue{
+        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-sky-600
+    }
+
     .sub-header-text{
         @apply font-poppins font-medium leading-tight text-3xl text-sky-800
     }

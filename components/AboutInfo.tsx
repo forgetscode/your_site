@@ -50,7 +50,7 @@ const AboutInfo = () => {
                                                 />
                                                 <Tooltip title="Zoom in.">
                                                     <div className='h-full w-full flex justify-center items-center bg-black opacity-0 hover:opacity-40 transition-all duration-700 ease-in-out'>
-                                                        <ZoomInIcon className='text-white h-20 w-20 opacity-100'/>
+                                                        <ZoomInIcon className='text-white h-20 w-20'/>
                                                     </div>
                                                 </Tooltip>
                                             </div> 
