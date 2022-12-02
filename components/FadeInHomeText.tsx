@@ -19,7 +19,7 @@ const FadeInHomeText = () => {
         <div className="flex items-center justify-center z-10 h-screen w-full">
             <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-100">
             <p className="text-white font-bold text-2xl md:text-5xl lg:text-7xl z-10 ">
-                Michael Gergely
+                hello
             </p>
             <div className="flex flex-row">
                 <p className="text-white font-semibold text-xl lg:text-3xl z-10 pr-2 lg:pr-3">
@@ -36,7 +36,7 @@ const FadeInHomeText = () => {
         <div className="flex items-center justify-center z-10 h-screen w-full">
             <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-0">
                 <p className="text-white font-bold text-2xl md:text-5xl lg:text-7xl z-10 ">
-                Michael Gergely
+                hello
                 </p>
                 <div className="flex flex-row">
                 <p className="text-white font-semibold text-xl lg:text-3xl z-10 pr-2 lg:pr-3">
