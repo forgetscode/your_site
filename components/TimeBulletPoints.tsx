@@ -49,14 +49,12 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, image}
                         <span className='flex flex-col pt-1 space-y-2'>
                                 {
                                     points?.map((point:string, i) => (
-                                        <li key={i} className='ml-2 flex flex-row w-72 '>
-                                            <div className='h-2 w-2'>
-                                                <CircleIcon className='text-black h-2 w-2 mt-2.5'/>
-                                            </div>
-                                            <p className='flex ml-3 text-black font-poppins font-medium text-lg'> 
+                                        <ul key={i} className='ml-2 flex flex-row w-72 list-disc list-inside'>
+                                            <li></li>
+                                            <li className=' flex ml-3 text-black font-poppins font-medium text-lg'> 
                                                 {point} 
-                                            </p> 
-                                        </li>
+                                            </li> 
+                                        </ul>
                                     ))
                                 }
                         </span>                 
