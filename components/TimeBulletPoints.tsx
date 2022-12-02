@@ -7,22 +7,13 @@ interface pageProps {
     years: string,
     position: string,
     points: string[], 
-    lineHeight: number,
     image: string | null,
     
 }
 
-const TimeBullet: React.FC<pageProps> = ({title, years, position, points, lineHeight, image}) => {
-    let lineAdjusted = "450px"
-    let lineOrig = "500px"
-
+const TimeBullet: React.FC<pageProps> = ({title, years, position, points, image}) => {
     if (!image){
         image = ""
-    }
-
-    if(lineHeight){
-        lineAdjusted = String(lineHeight -50) + "px"
-        lineOrig = String(lineHeight) + "px"
     }
 
     return (
@@ -36,8 +27,8 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, lineHe
                     <p className="-mt-1.5 ml-3 font-medium font-poppins leading-tight text-2xl text-sky-600 max-w-32"> {title}</p>
                 </div>
                 <div className="flex flex-row pt-2">
-                    <div className={`mt-10 flex justify-center items-center h-[${lineAdjusted}] w-6`}>
-                        <div className={`absolute w-0.5 h-[${lineOrig}] bg-sky-600`}></div>
+                    <div className={`mt-10 flex justify-center items-center h-[450px] w-6`}>
+                        <div className={`absolute w-0.5 h-[500px] bg-sky-600`}></div>
                     </div>
                     <div className="flex flex-col pt-6 ml-3 space-y-2">
                         <div className='flex flex-row'>
@@ -59,7 +50,9 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, lineHe
                                 {
                                     points?.map((point:string, i) => (
                                         <li key={i} className='ml-2 flex flex-row w-72 '>
-                                            <CircleIcon className='text-black h-2 w-2 mt-2.5'/>
+                                            <div className='h-2 w-2'>
+                                                <CircleIcon className='text-black h-2 w-2 mt-2.5'/>
+                                            </div>
                                             <p className='flex ml-3 text-black font-poppins font-medium text-lg'> 
                                                 {point} 
                                             </p> 

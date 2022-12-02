@@ -136,25 +136,24 @@ const Home: NextPage = () => {
                   Work Experience
               </header>
               <TimeBulletPoints title = {"Richmond Night Market"} years = {"2017 - 2017"} position = {"General laborer"} image = {"/default.svg"}
-                lineHeight={300} 
                 points = {
                   [
                     "Worked with constantly changing team members developing adaptability.",
                     "Worked in a multitude of diverse positions garnering patience and flexibility.",
+                    "Performed daily, weekly, and monthly reports, and updated calendar of appoints"
                   ]
                 }
               />
-              <TimeBulletPoints title = {"Intuitiv Solutions"} years = {"2017 - 2018"} position = {"Promoter"} image = {"/default.svg"}
-                lineHeight={300} 
+              <TimeBulletPoints title = {"Intuitiv Solutions"} years = {"2017 - 2018"} position = {"Promoter"} image = {"/default.svg"} 
                 points = {
                   [
                     "Offered IT services for local and international clients.",
                     "Sought people based on selective targeting for advertising purposes",
+                    "Addressed client’s needs and recommended the right solution to enhance business productivity",
                   ]
                 }
               />
               <TimeBulletPoints title = {"BC Centre for Disease Control"} years = {"Jan 2019 - April 2019"} position = {"Software Developer"} image = {"/default.svg"}
-                lineHeight={500} 
                 points = {
                   [
                     "Created features for and improved Bio-Informatics genetic sequencing software Sequdas with Python and Chron Job scheduling for an automated pipeline",
@@ -164,7 +163,6 @@ const Home: NextPage = () => {
                 }
               />
               <TimeBulletPoints title = {"SEO Tofu"} years = {"Jan 2020 - November 2021"} position = {"React Developer"} image = {"/default.svg"}
-                lineHeight={500} 
                 points = {
                   [
                     "Addressed client’s needs and recommended the right solution to enhance business productivitys",
