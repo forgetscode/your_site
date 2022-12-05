@@ -110,30 +110,38 @@ const AboutInfo = () => {
                     <Fade bottom={true} duration={1000}>
                         <div className="w-full flex justify-center pb-32">
                             <div className='flex ml-12 md:ml-0 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
+                            <Fade bottom={true} duration={1000}>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <GitHubIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>271</p>
                                     <p className='font-bold body-text dark:body-text'> Github contributions</p>
                                     <p className='body-text dark:body-text'> in 2022.</p>
                                 </div>
+                            </Fade>
+                            <Fade bottom={true} duration={1000}>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <SportsEsportsIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>2</p>
                                     <p className='font-bold body-text dark:body-text'> Time Diamond League of Legends player</p>
                                     <p className='body-text dark:body-text'>in 2016, and 2018.</p>
                                 </div>
+                            </Fade>
+                            <Fade bottom={true} duration={1000}>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <CalculateIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>A+</p>
                                     <p className='font-bold body-text dark:body-text'> In Calculus </p>
                                     <p className='body-text dark:body-text'>at SFU.</p>
                                 </div>
+                            </Fade>
+                            <Fade bottom={true} duration={1000}>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <FoodBankIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>Solo</p>
                                     <p className='font-bold body-text dark:body-text'>Large Pizza </p>
                                     <p className='body-text dark:body-text'>in one sitting this one time. Maybe more than once.</p>
                                 </div>
+                            </Fade>
                             </div>
                         </div>
                     </Fade>
