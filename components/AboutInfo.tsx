@@ -12,6 +12,8 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 
+import portait from '../public/portait.png'
+
 const Fade = require("react-reveal/Fade")
 
 const AboutInfo = () => {
@@ -38,24 +40,21 @@ const AboutInfo = () => {
                     <div className="w-full flex justify-center">
                         <div className="w-4/6 justify-center flex flex-col md:flex-row md:space-x-6">
                             <Fade left={true} duration={2000}>
-                                <div className='flex h-[340px] w-[340px]'>
+                                <div className='flex'>
+                                    <Tooltip title="Zoom in.">
                                         <Button onClick={handleOpen}>
-                                            <div className="flex h-[340px] w-[340px] min-w-[340px] min-h-[340px] group">
+                                            <div className="flex group h-[340px] w-[340px] transition-all duration-700 ease-in-out">
                                                 <Image
                                                 className='group'
-                                                src="/about.png"
-                                                alt=""
-                                                layout="fill"
-                                                quality={100}                
+                                                src={portait} 
+                                                alt=''            
                                                 />
-                                                <Tooltip title="Zoom in.">
-                                                    <div className='h-full w-full flex justify-center items-center bg-black opacity-0 hover:opacity-40 transition-all duration-700 ease-in-out'>
-                                                        <ZoomInIcon className='text-white h-20 w-20'/>
-                                                    </div>
-                                                </Tooltip>
+                                                <ZoomInIcon className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group group-hover:opacity-80 text-white h-20 w-20'/>
+                                            
                                             </div> 
                                         </Button>
-                                    </div>
+                                    </Tooltip>
+                                </div>
                                 <Modal
                                     className="cursor-pointer"
                                     open={open}
@@ -65,10 +64,10 @@ const AboutInfo = () => {
                                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                                                     md:h-[480px] md:w-[480px] h-[340px] w-[340px] min-w-[340px] min-h-[340px]">
                                         <Image
-                                            src="/about.png"
+                                            src={portait}
                                             alt=""
-                                            layout="fill"
-                                            quality={100}                
+                                            quality={100}
+                                            priority       
                                         />
                                     </div>
                                     </Tooltip>
@@ -84,12 +83,12 @@ const AboutInfo = () => {
                                     </p>
                                     <div className="flex flex-row space-x-20 body-text dark:dark-body-text">
                                         <div className="flex flex-col space-y-3">
-                                        <Bullet title={"Birthday"} text={"20 Nov 1995"}/>
-                                        <Bullet title={"Phone"} text={"778-XXX-XXX"}/>
-                                        <Bullet title={"Location"} text={"Vancouver, Canada"}/>
-                                        <Bullet title={"University"} text={"Simon Fraser University"}/>
-                                        <Bullet title={"Email"} text={"Forgetscode@gmail.com"}/>
-                                        <Bullet title={"Freelance"} text={"Available"}/>
+                                            <Bullet title={"Birthday"} text={"20 Nov 1995"}/>
+                                            <Bullet title={"Phone"} text={"778-XXX-XXX"}/>
+                                            <Bullet title={"Location"} text={"Vancouver, Canada"}/>
+                                            <Bullet title={"University"} text={"Simon Fraser University"}/>
+                                            <Bullet title={"Email"} text={"Forgetscode@gmail.com"}/>
+                                            <Bullet title={"Freelance"} text={"Available"}/>
                                         </div>  
                                     </div>
                                 </div>
@@ -110,7 +109,7 @@ const AboutInfo = () => {
                     
                     <Fade bottom={true} duration={1000}>
                         <div className="w-full flex justify-center pb-32">
-                            <div className='flex justify-between flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-10 lg:space-x-20 pt-16'>
+                            <div className='flex ml-16 md:ml-0 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <GitHubIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>271</p>

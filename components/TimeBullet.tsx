@@ -40,7 +40,8 @@ const TimeBullet: React.FC<pageProps> = ({title, years, location, image, wide}) 
                                     alt=""
                                     height={45}
                                     width={225}
-                                    quality={100}                
+                                    quality={100}    
+                                    priority            
                                 />
                             </div>  
                             :                     
@@ -50,7 +51,8 @@ const TimeBullet: React.FC<pageProps> = ({title, years, location, image, wide}) 
                                     alt=""
                                     height={64}
                                     width={64}
-                                    quality={100}                
+                                    quality={100}   
+                                    priority             
                                 />
                             </div>
                         }

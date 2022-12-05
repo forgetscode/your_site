@@ -12,11 +12,15 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 import SectionSpan from "./SectionSpan";
 
+import portait from '../public/portait.png'
+
 const SideBar = () => {
     const { mode } = useColorMode()
     const [showSideBar, setShowSideBar ] = useState<Boolean>(true);
-    const [ image, setImage ] = useState(1)
+    //const [ image, setImage ] = useState(1)
 
+    
+    /* code for alternating images
     useEffect(() => {
         const interval = setInterval(() => {
             if(image == 4){
@@ -29,7 +33,8 @@ const SideBar = () => {
         
         return () => clearInterval(interval)
     }, [image]);
-    
+    */
+
     useEffect(() => {
         setShowSideBar(!showSideBar);
         if (window.innerWidth >= 1024) {
@@ -73,31 +78,9 @@ const SideBar = () => {
                 <div className="relative w-32 h-32 rounded-full border-4 border-sky-200 dark:border-gray-700">
                     
                         { 
-                            image == 1 ? 
                             <Image
                                 className="rounded-full transition-all"
-                                src="/pic1.png"
-                                alt=""
-                                layout="fill"
-                            />
-                            : image == 2 ?
-                            <Image
-                                className="rounded-full transition-all"
-                                src="/pic2.png"
-                                alt=""
-                                layout="fill"
-                            />
-                            : image == 3 ?
-                            <Image
-                                className="rounded-full transition-all"
-                                src="/pic3.png"
-                                alt=""
-                                layout="fill"
-                            />
-                            : 
-                            <Image
-                                className="rounded-full transition-all"
-                                src="/pic4.png"
+                                src={portait}
                                 alt=""
                                 layout="fill"
                             />
