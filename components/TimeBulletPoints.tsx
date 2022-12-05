@@ -35,7 +35,7 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, image,
                         <div className={`w-0.5 h-[500px] bg-sky-600 z-10`}></div>
                     </div>
                 </div>
-                <div className='flex flex-col space-y-1 -mt-1'>
+                <div className='flex flex-col space-y-2 -mt-1'>
                     <p className="font-medium font-poppins leading-tight text-2xl text-sky-600 max-w-32"> {title}</p>
                     <div className='flex flex-row h-8 w-64 bg-gray-200 p-1'>
                             <Image
@@ -53,7 +53,7 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, image,
                                 points?.map((point:string, i) => (
                                     <ul key={i} className='ml-2 flex flex-row w-68 list-disc list-inside'>
                                         <li></li>
-                                        <li className=' flex ml-3 text-black font-poppins font-medium text-lg'> 
+                                        <li className=' flex ml-3 text-black font-poppins font-medium text-sm md:text-base lg:text-lg'> 
                                             {point} 
                                         </li> 
                                     </ul>

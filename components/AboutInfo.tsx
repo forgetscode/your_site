@@ -73,7 +73,7 @@ const AboutInfo = () => {
                                     </Tooltip>
                                 </Modal>
                             </Fade>
-                            <Fade right={true} duration={2000}>
+                            <Fade left={true} duration={2000}>
                                 <div className="flex flex-col space-y-6">
                                     <header className="text-2xl text-gray-900 font-semibold pt-20 md:pt-0 sub-header-text dark:dark-sub-header-text">
                                         Web Developer & Full Stack Engineer
@@ -109,7 +109,7 @@ const AboutInfo = () => {
                     
                     <Fade bottom={true} duration={1000}>
                         <div className="w-full flex justify-center pb-32">
-                            <div className='flex ml-16 md:ml-0 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
+                            <div className='flex ml-12 md:ml-0 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <GitHubIcon className="text-sky-600 h-16 w-16"/>
                                     <p className='font-semibold text-3xl'>271</p>

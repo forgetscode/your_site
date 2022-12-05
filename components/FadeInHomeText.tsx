@@ -17,7 +17,7 @@ const FadeInHomeText = () => {
     <header className={`${mode === "dark" ? 'dark' : ''}`}>
         { fadeIn ? 
         <div className="flex items-center justify-center z-10 h-screen w-full">
-            <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-100">
+            <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-100 -mt-20">
             <p className="text-white font-bold text-2xl md:text-5xl lg:text-7xl z-10 ">
                 Michael Gergely
             </p>
@@ -34,7 +34,7 @@ const FadeInHomeText = () => {
         </div>
         :
         <div className="flex items-center justify-center z-10 h-screen w-full">
-            <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-0">
+            <div className="flex-col z-10 space-y-2 md:space-y-4 lg:space-y-6 transition-opacity ease-in duration-700 opacity-0 -mt-20">
                 <p className="text-white font-bold text-2xl md:text-5xl lg:text-7xl z-10 ">
                 Michael Gergely
                 </p>
