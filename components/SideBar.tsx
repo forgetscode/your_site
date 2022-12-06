@@ -5,7 +5,7 @@ import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import ClearIcon from '@mui/icons-material/Clear';
 import Image from 'next/image'
 import { Tooltip } from "@mui/material";
-import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -13,6 +13,7 @@ import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 import SectionSpan from "./SectionSpan";
 
 import portait from '../public/profile.jpg';
+import Link from "next/link";
 
 const SideBar = () => {
     const { mode } = useColorMode()
@@ -92,27 +93,43 @@ const SideBar = () => {
                 </p>
             </div>
 
-            <div className="flex z-10 flex-row space-x-3 justify-center">
-                <Tooltip title="Youtube">
-                    <span className="social-icon cursor-pointer">
-                        <YouTubeIcon className="h-5 w-5"/>
-                    </span>
-                </Tooltip>
-                <Tooltip title="Twitter">
-                    <span className="social-icon cursor-pointer">
-                        <TwitterIcon className="h-5 w-5"/>
-                    </span>
-                </Tooltip>
-                <Tooltip title="FaceBook">
-                    <span className="social-icon cursor-pointer">
-                        <FacebookIcon className="h-5 w-5"/>
-                    </span>
-                </Tooltip>
-                <Tooltip title="LinkedIn">
-                    <span className="social-icon cursor-pointer">
-                        <LinkedInIcon className="h-5 w-5"/>
-                    </span>
-                </Tooltip>
+            <div className="flex z-10 flex-row space-x-3 justify-center pb-1">
+                <Link href="https://www.youtube.com/channel/UCrKtXjuk-JANccPjEu4cxwQ">
+                    <a target="_blank">
+                        <Tooltip title="Youtube">
+                            <span className="social-icon cursor-pointer">
+                                <YouTubeIcon className="h-5 w-5"/>
+                            </span>
+                        </Tooltip>
+                    </a>
+                </Link>
+                <Link href="https://github.com/forgetscode/your_site">
+                    <a target="_blank">
+                        <Tooltip title="GitHub">
+                            <span className="social-icon cursor-pointer">
+                                <GitHubIcon className="h-5 w-5"/>
+                            </span>
+                        </Tooltip>
+                    </a>
+                </Link>
+                <Link href="https://www.facebook.com/mike.gergely/">
+                    <a target="_blank">
+                        <Tooltip title="FaceBook">
+                            <span className="social-icon cursor-pointer">
+                                <FacebookIcon className="h-5 w-5"/>
+                            </span>
+                        </Tooltip>
+                    </a>
+                </Link>
+                <Link href="https://www.linkedin.com/in/michael-gergely-2407ba250/?originalSubdomain=ca">
+                    <a target="_blank">
+                        <Tooltip title="LinkedIn">
+                            <span className="social-icon cursor-pointer">
+                                <LinkedInIcon className="h-5 w-5"/>
+                            </span>
+                        </Tooltip>
+                    </a>
+                </Link>
             </div>
 
             <SectionSpan/>

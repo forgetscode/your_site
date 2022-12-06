@@ -45,7 +45,8 @@ const AboutInfo = () => {
                                                     <Image
                                                     className='group'
                                                     src={portait} 
-                                                    alt=''            
+                                                    alt=''
+                                                    priority            
                                                     />
                                     </div>
                                     {/*

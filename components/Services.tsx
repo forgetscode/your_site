@@ -26,7 +26,7 @@ const Services = () => {
                     {/* maximum 3 services per layout*/}
                     <ServicesLayout props = 
                     {[
-                        {title:"Server Side Rendering", icon:"deliver", iconColor:"text-slate-700", text:"Server side render you data for increased performance using NextJs."},
+                        {title:"Server Side Rendering", icon:"deliver", iconColor:"text-slate-700", text:"Server side render your data for increased performance using NextJs."},
                         {title:"Stripe/Crypto payments", icon:"paid", iconColor:"text-green-600", text:"Integrate with Stripe or Blockchain for payments."},
                         {title:"Wordpress", icon:"circle", iconColor:"text-indigo-300", text:"Create websites using wordpress."},
                     ]}
