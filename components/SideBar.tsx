@@ -12,7 +12,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 import SectionSpan from "./SectionSpan";
 
-import portait from '../public/portait.png'
+import portait from '../public/portait.png';
 
 const SideBar = () => {
     const { mode } = useColorMode()
@@ -82,7 +82,7 @@ const SideBar = () => {
                                 className="rounded-full transition-all"
                                 src={portait}
                                 alt=""
-                                layout="fill"
+                                priority
                             />
                         }
                 </div>
