@@ -5,7 +5,7 @@ const Services = () => {
         <div id = {"Services"} className="w-full flex justify-center bg-white pb-20">
             <div className='flex flex-col w-full items-center bg-white space-y-16 lg:ml-72'>
                 <p className="flex pt-10 header-text dark:dark-header-text decoration-sky-800 underline underline-offset-[30px] pb-12"> SERVICES</p>
-                <div className='w-4/6'>
+                <div className=''>
                     {/* maximum 3 services per layout*/}
                     <ServicesLayout props = 
                     {[

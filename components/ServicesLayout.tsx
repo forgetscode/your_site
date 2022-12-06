@@ -18,7 +18,7 @@ const ServicesLayout: React.FC<pageProps> = ({props}) => {
     return (
         <div className='flex flex-col w-full p-4'>
             <Fade bottom={true} cascade={true} duration={700}> 
-                <div className='w-full space-y-8 md:space-y-0 flex-col flex md:flex-row md:space-x-8'>
+                <div className='w-full space-y-8 2xl:space-y-0 flex-col flex 2xl:flex-row 2xl:space-x-8'>
                     {
                         props?.map((service:Service, i) => (
                             
