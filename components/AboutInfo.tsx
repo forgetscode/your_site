@@ -49,7 +49,7 @@ const AboutInfo = () => {
                                                 src={portait} 
                                                 alt=''            
                                                 />
-                                                <ZoomInIcon className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group group-hover:opacity-80 text-white h-20 w-20'/>
+                                                <ZoomInIcon className='absolute  h-[340px] w-[340px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 bg-black group group-hover:opacity-80 text-white'/>
                                             
                                             </div> 
                                         </Button>
@@ -60,7 +60,7 @@ const AboutInfo = () => {
                                     open={open}
                                     onClose={handleClose}
                                     >
-                                    <Tooltip title="AI generated Mad Scientist, created with MidJourney.">
+                                    <Tooltip title="AI generated, created with MidJourney.">
                                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                                                     md:h-[480px] md:w-[480px] h-[340px] w-[340px] min-w-[340px] min-h-[340px]">
                                         <Image
@@ -109,7 +109,7 @@ const AboutInfo = () => {
                     
                     <Fade bottom={true} duration={1000}>
                         <div className="w-full flex justify-center pb-32">
-                            <div className='flex ml-12 md:ml-0 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
+                            <div className='flex ml-12 flex-col justify-center space-y-10 md:space-y-0 md:flex-row  lg:space-x-20 pt-16'>
                             <Fade bottom={true} duration={1000}>
                                 <div className='flex flex-col body-text dark:dark-body-text space-y-3 w-36'>
                                     <GitHubIcon className="text-sky-600 h-16 w-16"/>
