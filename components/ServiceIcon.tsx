@@ -18,34 +18,34 @@ const ServicesLayout: React.FC<pageProps> = ({icon, colorCode}) => {
         <div className = "h-24 w-24">
             {
                 (icon === "cloud") ?
-                <CloudIcon className={`h-24 w-24 ${colorCode}`}/>
+                <CloudIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "article") ?
-                <ArticleIcon className={`h-24 w-24 ${colorCode}`}/>
+                <ArticleIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "connect") ?
-                <ConnectWithoutContactIcon className={`h-24 w-24 ${colorCode}`}/>
+                <ConnectWithoutContactIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "fire") ?
-                <LocalFireDepartmentIcon className={`h-24 w-24 ${colorCode}`}/>
+                <LocalFireDepartmentIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "image") ?
-                <ImageIcon className={`h-24 w-24 ${colorCode}`}/>
+                <ImageIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "paid") ?
-                <PaidIcon className={`h-24 w-24 ${colorCode}`}/>
+                <PaidIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "design") ?
-                <DesignServicesIcon className={`h-24 w-24 ${colorCode}`}/>
+                <DesignServicesIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "deliver") ?
-                <LocalShippingIcon className={`h-24 w-24 ${colorCode}`}/>
+                <LocalShippingIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "circle") ?
-                <LanguageIcon className={`h-24 w-24 ${colorCode}`}/>
+                <LanguageIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :
                 (icon === "image") ?
-                <ImageIcon className={`h-24 w-24 ${colorCode}`}/>
+                <ImageIcon sx={{ fontSize: 96 }} className={`${colorCode}`}/>
                 :<></>
             }
         </div>

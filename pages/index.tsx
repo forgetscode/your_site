@@ -16,8 +16,6 @@ import background from '../public/backgroundTemp.jpg';
 import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 
-const Fade = require("react-reveal/Fade")
-
 const getOffSet = (id:string) => {
   const offset = document.getElementById(id)?.offsetHeight
   if (offset){
@@ -133,6 +131,7 @@ const Home: NextPage = () => {
       <div id = {"Contact"} className="w-full flex justify-center bg-white ">
             <div className='flex flex-col w-full items-center bg-white space-y-16 lg:ml-72'>
                 <p className="flex pt-10 header-text dark:dark-header-text decoration-sky-800 underline underline-offset-[30px] pb-12"> CONTACT</p>
+                <div className=""></div>
             </div>
         </div>
 

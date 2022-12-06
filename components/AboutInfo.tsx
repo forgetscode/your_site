@@ -12,7 +12,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import FoodBankIcon from '@mui/icons-material/FoodBank';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 
-import portait from '../public/portait.png'
+import portait from '../public/portait.jpg'
 
 const Fade = require("react-reveal/Fade")
 
@@ -41,19 +41,28 @@ const AboutInfo = () => {
                         <div className="w-4/6 justify-center flex flex-col md:flex-row md:space-x-6">
                             <Fade left={true} duration={2000}>
                                 <div className='flex'>
-                                    <Tooltip title="Zoom in.">
-                                        <Button onClick={handleOpen}>
-                                            <div className="flex group h-[340px] w-[340px] transition-all duration-700 ease-in-out">
-                                                <Image
-                                                className='group'
-                                                src={portait} 
-                                                alt=''            
-                                                />
-                                                <ZoomInIcon className='absolute  h-[340px] w-[340px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 bg-black group group-hover:opacity-80 text-white'/>
-                                            
-                                            </div> 
-                                        </Button>
-                                    </Tooltip>
+                                    <div className="flex group h-[340px] w-[280px] transition-all duration-700 ease-in-out">
+                                                    <Image
+                                                    className='group'
+                                                    src={portait} 
+                                                    alt=''            
+                                                    />
+                                    </div>
+                                    {/*
+                                        <Tooltip title="Zoom in.">
+                                            <Button onClick={handleOpen}>
+                                                <div className="flex group h-[340px] w-[280px] transition-all duration-700 ease-in-out">
+                                                    <Image
+                                                    className='group'
+                                                    src={portait} 
+                                                    alt=''            
+                                                    />
+                                                    <ZoomInIcon sx={{ fontSize: 340 }}className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 bg-black group group-hover:opacity-80 text-white'/>
+                                                
+                                                </div> 
+                                            </Button>
+                                        </Tooltip>
+                                    */}
                                 </div>
                                 <Modal
                                     className="cursor-pointer"
