@@ -206,7 +206,6 @@ const AboutInfo = () => {
                             <ProgressBar title={"AWS"} percent={"30%"}/>
                         </div>
                         <div className='w-full flex flex-col items-center md:flex-row space-y-6 md:space-y-0 md:space-x-20 justify-center pb-20'>
-                            <ProgressBar title={"C++"} percent={"30%"}/>
                             <ProgressBar title={"C"} percent={"20%"}/>
                         </div> 
                 </div>

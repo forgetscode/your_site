@@ -16,6 +16,11 @@ import background from '../public/backgroundTemp.jpg';
 import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MailIcon from '@mui/icons-material/Mail';
+import Link from "next/link";
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+
 const getOffSet = (id:string) => {
   const offset = document.getElementById(id)?.offsetHeight
   if (offset){
@@ -131,7 +136,57 @@ const Home: NextPage = () => {
       <div id = {"Contact"} className="w-full flex justify-center bg-white ">
             <div className='flex flex-col w-full items-center bg-white space-y-16 lg:ml-72'>
                 <p className="flex pt-10 header-text dark:dark-header-text decoration-sky-800 underline underline-offset-[30px] pb-12"> CONTACT</p>
-                <div className=""></div>
+                <div className="flex flex-col space-y-16 ">
+
+                  <div className="flex flex-row space-x-2">
+                    <LocationOnIcon sx={{ fontSize: 36 }} className="text-sky-600"/>
+                    <div className="flex flex-col">
+                      <p className="sub-header-text">
+                        Location:
+                      </p>
+                      <p className="body-text">
+                        Vancouver, BC, Canada
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-row space-x-2">
+                    <MailIcon sx={{ fontSize: 36 }} className="text-sky-600"/>
+                    <div className="flex flex-col">
+                      <p className="sub-header-text">
+                        Email:
+                      </p>
+                      <p className="body-text">
+                        Forgetscode@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-row space-x-2">
+                    <div className="flex flex-col justify-center">
+                      <div className="flex flex-col pb-32 space-y-2">
+                          <Link href="https://zelda-ten.vercel.app/">
+                            <a target="_blank" className="">
+                            <Tooltip title="Open">
+                              <div className=' flex flex-row p-4 rounded-xl text-teal-600
+                                              cursor-pointer bg-gray-900
+                                              px-1 transition-all ease-in-out duration-500 w-36
+                                              '>
+                                <p className='italic text-2xl md:text-4xl'> Zelda</p>
+                                <p className='not-italic text-sm'> sms</p>
+                                <p className='text-2xl md:text-4xl'> :</p>
+                              </div>
+                            </Tooltip>
+                            </a>
+                        </Link>
+                        <p className="body-text">
+                          DfT3LJ75YTamopdp9grXpUv3ZrtqGfsDiJghBKn5DJbB
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
             </div>
         </div>
 
