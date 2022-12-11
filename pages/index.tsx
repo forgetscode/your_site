@@ -60,7 +60,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = window.scrollY
-      {/*console.log("height: ", scrollHeight, "About: ", sections.About , "Resume: ", sections.Resume)*/}
+      {/*??console.log("height: ", scrollHeight, "About: ", sections.About , "Resume: ", sections.Resume)*/}
         if (scrollHeight > 0) {
             setIsScrolled(true)
         } else {
