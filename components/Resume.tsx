@@ -5,17 +5,17 @@ const Resume = () => {
     return(
     <div id = {"Resume"} className="w-full flex bg-white">
         <div className='flex flex-col w-full space-y-8 lg:ml-72 bg-white'>
-        <p className="w-full flex justify-center pt-10 header-text dark:dark-header-text decoration-sky-800 underline underline-offset-[30px] pb-20"> RESUME</p>
+        <p className="w-full flex justify-center pt-10 header-text dark:dark-header-text decoration-sky-800 underline underline-offset-[30px]  pt-16"> RESUME</p>
         <div className="self-center flex-col space-y-16 md:space-y-0 md:flex-row flex w-4/6 lg:ml-72 bg-white">
             <div className="w-full flex flex-col bg-white">
-            <header className="flex header-text pb-10">
+            <header className="flex header-text pb-20">
                 Education
             </header>
             <TimeBullet title = {"Hugh Boyd Secondary"} years = {"2009 - 2015"} location = {"Richmond, BC"} image = {"/school1.png"} wide ={false}/>
             <TimeBullet title = {"Simon Fraser University"} years = {"2015 - 2020"} location = {"Burnaby, BC"} image = {"/school2.png"} wide={true}/>
             </div>
             <div className="w-full flex flex-col bg-white">
-            <header className="flex header-text pb-10">
+            <header className="flex header-text pb-20">
                 Work Experience
             </header>
             <TimeBulletPoints title = {"Richmond Night Market"} years = {"2017 - 2017"} position = {"General laborer"} image = {"/default.svg"} large={false}

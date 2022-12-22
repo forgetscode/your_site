@@ -1,100 +1,32 @@
 
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import SideBar from "../components/SideBar";
+import SideBar from "../components/SideBar/SideBar";
 import { useColorMode } from "../context/ColorModeContext";
 import Image from 'next/image'
 import { NextPage } from "next";
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Tooltip } from "@mui/material";
-import { useScroll } from "../context/ActiveScroll";
-import AboutInfo from "../components/AboutInfo";
+import AboutInfo from "../components/About/AboutInfo";
 import FadeInHomeText from "../components/FadeInHomeText";
 import Resume from "../components/Resume";
 
-import background from '../public/backgroundTemp.jpg';
+import background from '../public/bg.jpg';
 import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailIcon from '@mui/icons-material/Mail';
 import Link from "next/link";
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-
-const getOffSet = (id:string) => {
-  const offset = document.getElementById(id)?.offsetHeight
-  if (offset){
-    return offset
-  }
-  return 0
-}
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
+import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
+import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import CalculateIcon from '@mui/icons-material/Calculate';
 
 const Home: NextPage = () => {
   const { mode } = useColorMode()
-  const [ isScrolled, setIsScrolled]  = useState(false)
-  const { setActiveScroll } = useScroll()
-  const [ sections, setSections ] = useState({
-    Home:0,
-    About:1, 
-    Resume:2, 
-    Portfolio:3, 
-    Services:4, 
-    Contact:5 
-  })
-
-  const updateMedia = () => {
-    sections.Home = 0
-    sections.About = getOffSet("Home")
-    sections.Resume = getOffSet("About") + sections.About
-    sections.Portfolio = getOffSet("Resume") + sections.Resume
-    sections.Services = getOffSet("Portfolio") + sections.Portfolio
-    sections.Contact = getOffSet("Services") + sections.Services
-  };
-
-  useEffect(() => {
-    updateMedia()
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollHeight = window.scrollY
-      {/*??console.log("height: ", scrollHeight, "About: ", sections.About , "Resume: ", sections.Resume)*/}
-        if (scrollHeight > 0) {
-            setIsScrolled(true)
-        } else {
-            setIsScrolled(false)
-        }
-        if (sections.About == 2){
-          updateMedia()
-        }
-        if (scrollHeight  >= sections.Contact -150){
-          setActiveScroll("Contact")
-        }
-        else if(scrollHeight >= sections.Services -150){
-          setActiveScroll("Services")
-        }
-        else if(scrollHeight >= sections.Portfolio -150){
-          setActiveScroll("Portfolio")
-        }
-        else if(scrollHeight >= sections.Resume -150){
-          setActiveScroll("Resume")
-        }
-        else if(scrollHeight >= sections.About -500){
-          setActiveScroll("About")
-        }
-        else{
-          setActiveScroll("Home")
-        }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-        window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
 
   return (
     <div className={`${mode === "dark" ? 'dark' : ''}`}>
@@ -102,30 +34,147 @@ const Home: NextPage = () => {
         <title>Michael Gergely - Web Dev</title>
         <link rel='icon' href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vsmart_logo.svg/402px-Vsmart_logo.svg.png?20200810165214"/>
       </Head>
-      <SideBar/>
-      <div id = {"Home"} className="absolute h-screen top-0"/>
-      <div  className="fixed -z-30 dark:bg-black dark:opacity-90 h-screen w-full">
+
+      <SideBar title = "Michael Gergely" footer="Michael Gergely" props = 
+          {
+            [
+              {id:"Home", icon:<HomeOutlinedIcon/>, title: "Home"},
+              {id:"About", icon:<PersonOutlineOutlinedIcon/>, title: "About"},
+              {id:"Resume", icon:<DescriptionOutlinedIcon/>, title: "Resume"},
+              {id:"Portfolio", icon:<BusinessCenterOutlinedIcon/>, title: "Portfolio"},
+              {id:"Services", icon:<EngineeringOutlinedIcon/>, title: "Services"},
+              {id:"Contact", icon:<MailOutlinedIcon/>, title: "Contact"},
+            ]
+          }
+        />
+
+      <div id = {"Home"} className="absolute h-full w-full top-0 "/>
+      <div  className="fixed -z-30 h-full w-full lg:-mt-[400px] brightness-75">
         <Image
-            className="absolute dark:opacity-80"
+            className="absolute "
             src={background}
-            layout="fill"
+            layout="responsive"
+            placeholder="blur"
             alt=""
-            priority              
+            priority            
         />
       </div>
 
-      { isScrolled ?
-          <button className="fixed transition-all z-10 light-theme dark:dark-theme dark:bg-gray-900 rounded-full w-10 h-10  right-5 bottom-5 text-center cursor-pointer"
-              onClick={()=>document.getElementById("Home")?.scrollIntoView({behavior: "smooth" , block: "center"})}>
-             <Tooltip title="Home"><ArrowUpwardIcon className="text-white"/></Tooltip>
-          </button> 
-          : 
-              <></>
-                    
-      }
-      <FadeInHomeText/>
+      <div className="lg:ml-[350px]">
+        <FadeInHomeText title={"Michael Gergely"} texts={['Front-end Developer.', 'Back-End Developer.', 'Blockchain-Developer.', 'Web Developer.']}/>
+      </div>
 
-      <AboutInfo/>
+      <AboutInfo 
+        bio= {`Fascinated by the bleeding edge of technology, I am constantly seeking new ways to expand my knowledge and skills.
+          After earning my Bachelor's degree in Computer Science and Microbiology and Biochemistry from Simon Fraser University, 
+          I have gained experience working with React, cloud services, and blockchain technology. 
+          Recently, I have been particularly interested in AI image generation and am constantly seeking opportunities to combine and showcase my diverse 
+          skill set.
+          `}
+        title={"Web Developer & Full Stack Engineer"}
+        info={"Gym Enthusiast, Basketball player, Cat Lover"}
+        points={
+          [
+            {title:"Phone", info:"778-789-3561"},
+            {title:"Location", info:"Vancouver, Canada"},
+            {title:"University", info:"Simon Fraser University"},
+            {title:"Email",  info:"Michael.v.y.gergely@gmail.com"},
+          ]
+        }
+        quote={`You miss 100% of the shots you don't take.`}
+        quoteAuthor={"Wayne Gretzky"}
+        facts={
+          [
+            {
+              icon:<GitHubIcon className="second-text-theme h-16 w-16"/>,
+              titleMark:"308",
+              title:"Github contributions",
+              info:"in 2022.",
+            },
+            {
+              icon:<CalculateIcon className='second-text-theme h-16 w-16'/>,
+              titleMark:"A+",
+              title:"In Calculus",
+              info:"at SFU.",
+            }
+
+          ]
+        }
+        skills={
+          [
+            {
+              title:"HTML",
+              percentage:"90%",
+              titleSecond:"CSS",
+              percentageSecond:"90%",
+            },
+            {
+              title:"Javascript",
+              percentage:"90%",
+              titleSecond:"Typescript",
+              percentageSecond:"90%",
+            },
+            {
+              title:"React",
+              percentage:"90%",
+              titleSecond:"Tailwind",
+              percentageSecond:"90%",
+            },
+            {
+              title:"NextJS",
+              percentage:"80%",
+              titleSecond:"Python",
+              percentageSecond:"80%",
+            },
+            {
+              title:"NodeJS",
+              percentage:"80%",
+              titleSecond:"Solana Blockchain",
+              percentageSecond:"70%",
+            },
+            {
+              title:"SQL(PSQL, MySQL)",
+              percentage:"70%",
+              titleSecond:"GraphQL",
+              percentageSecond:"60%",
+            },
+            {
+              title:"MaterialUI",
+              percentage:"60%",
+              titleSecond:"WordPress",
+              percentageSecond:"50%",
+            },
+            {
+              title:"Stripe",
+              percentage:"50%",
+              titleSecond:"TypeORM",
+              percentageSecond:"50%",
+            },
+            {
+              title:"FireBase",
+              percentage:"50%",
+              titleSecond:"Rust",
+              percentageSecond:"50%",
+            },
+            {
+              title:"PHP",
+              percentage:"40%",
+              titleSecond:"Docker",
+              percentageSecond:"40%",
+            },
+            {
+              title:"C++",
+              percentage:"30%",
+              titleSecond:"AWS",
+              percentageSecond:"30%",
+            },
+            {
+              title:"C",
+              percentage:"20%",
+            },
+          ]
+        }
+      />
 
       <Resume/>
 

@@ -3,67 +3,86 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@layer base {
+    body{
+        @apply bg-teal-100 dark:bg-white
+    }
+}
+
 @layer components {
-    .light-text{
-        @apply text-sky-500
+    .button-theme{
+      @apply bg-gray-600 dark:bg-slate-900
+    }
+    
+    .light-text {
+      @apply text-gray-800
+    }
+  
+    .dark-text {
+      @apply text-sky-400
     }
 
-    .dark-text{
-        @apply text-white
+    .text-theme{
+      @apply text-gray-400 dark:text-slate-900 transition-all
     }
+
+    .second-text-theme{
+      @apply text-sky-300  dark:text-sky-700 transition-all
+    }
+
+    .second-bg-theme{
+        @apply bg-sky-300 dark:bg-sky-700 transition-all
+      }
+  
+    .icon-color{
+      @apply text-sky-200 dark:dark-text
+    }
+
+    .decoration-color{
+        @apply decoration-sky-200 dark:decoration-sky-600 transition-all
+    }
+    
+    .side-bg{
+      @apply bg-gradient-to-r from-gray-400 to-white via-gray-400 shadow-md shadow-gray-400
+    }
+  
+    .side-bg-dark{
+      @apply bg-gradient-to-r from-gray-900 to-black via-gray-800 bg-opacity-80 shadow-md shadow-slate-900
+    }
+    
+    .unhighlighted-text{
+      @apply light-text dark:text-gray-400
+    }
+  
+    .highlighted-text{
+      @apply text-white
+    }
+  
+    .secondary-header{
+      @apply text-2xl highlighted-text font-bold 
+    }
+  
+    .social-icon{
+      @apply bg-gray-600 dark:bg-gray-900 hover:bg-sky-300 dark:hover:bg-sky-600 text-white rounded-full text-sm p-2 flex items-center justify-center
+    }
+  
+    .side-icon{
+      @apply flex unhighlighted-text group-hover:icon-color transition-all
+    }
+  
+    .side-text{
+      @apply flex unhighlighted-text group-hover:highlighted-text transition-all font-semibold
+    }
+
     .header-text{
-        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-slate-600
-    }
-
-    .dark-header-text{
-        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-slate-600
-    }
-
-    .header-text-blue{
-        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-sky-600
+        @apply font-medium leading-tight text-4xl mt-0 mb-2 py-10 text-theme decoration-color underline underline-offset-[30px]
     }
 
     .sub-header-text{
-        @apply font-poppins font-medium leading-tight text-3xl text-sky-800
-    }
-
-    .dark-sub-header-text{
-        @apply font-poppins font-medium leading-tight text-3xl text-sky-800
+        @apply font-poppins font-medium leading-tight text-3xl second-text-theme 
     }
 
     .body-text {
         @apply font-poppins text-black 
-    }
-
-    .dark-body-text {
-        @apply font-poppins text-black
-    }
-
-    .dark-theme{
-        @apply bg-gray-600
-    }
-
-    .light-theme{
-        @apply bg-slate-500
-    }
-
-    .social-icon{
-        @apply bg-gray-600 dark:bg-gray-900 text-white rounded-full h-10 w-10 text-sm p-2 hover:bg-sky-500 dark:hover:bg-sky-600 flex items-center justify-center
-    }
-
-    .span-button-active{
-        @apply flex flex-row space-x-3 ml-6 cursor-pointer p-2 bg-gray-100 dark:bg-black dark:bg-opacity-30 rounded-lg w-60 transition-all delay-[150ms]
-    }
-
-    .span-button-inactive{
-        @apply flex flex-row space-x-3 ml-6 cursor-pointer p-2
-    }
-
-    .id-icon{
-        @apply bg-white dark:bg-black text-gray-400 group-hover:text-sky-500 scale-110 transition-all duration-500 bg-clip-text
-    }
-
-    .id-text{
-        @apply dark:text-gray-400 group-hover:text-sky-500 dark:group-hover:text-white font-semibold transition-all duration-500
     }
   }
