@@ -3,12 +3,6 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-@layer base {
-    body{
-        @apply bg-teal-100 dark:bg-white
-    }
-}
-
 @layer components {
     .button-theme{
       @apply bg-gray-600 dark:bg-slate-900
