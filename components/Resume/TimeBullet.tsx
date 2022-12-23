@@ -18,15 +18,15 @@ const TimeBullet: React.FC<pageProps> = ({title, years, location, image, wide}) 
         <Fade bottom={true} cascade={true} duration={700}> 
                 <div className="flex flex-row">
                     <div className='flex flex-col'>
-                        <div className="-mb-1 -ml-2.5 relative bg-sky-600 rounded-full h-6 w-6 flex justify-center items-center z-20">
+                        <div className="-mb-1 -ml-2.5 relative second-bg-theme rounded-full h-6 w-6 flex justify-center items-center z-20">
                             <div className="bg-white rounded-full h-4 w-4"/>
                         </div>
                         <div className={`relative h-[450px] w-6 z-10`}>
-                            <div className={`w-0.5 h-[500px] bg-sky-600 z-10`}></div>
+                            <div className={`w-0.5 h-[500px] second-bg-theme z-10`}></div>
                         </div>
                     </div>
-                    <div className='flex flex-col md:-mt-1'>
-                        <p className=" font-medium font-poppins leading-tight md:text-2xl text-sky-600 max-w-32"> {title}</p>
+                    <div className='flex flex-col md:-mt-1.5'>
+                        <p className=" font-medium font-poppins leading-tight md:text-2xl second-text-theme max-w-32"> {title}</p>
                         <div className="flex flex-col pt-2 space-y-2">
                             <div className="bg-gray-200 text-center w-24">
                                 <p className="text-black font-poppins font-medium text-sm p-1 rounded-lg"> {years} </p>
