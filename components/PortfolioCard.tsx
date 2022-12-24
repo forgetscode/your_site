@@ -65,9 +65,9 @@ const PortfolioCard: React.FC<pageProps> = ({
                                 </p>
                                 <span className="space-y-4 lg:pt-10">
                                     {
-                                        buttons.map((button) => {
+                                        buttons.map((button, i) => {
                                             return (
-                                                <div className={`font-medium w-24 md:w-32 lg:w-40 leading-tight text-center text-xl portfolio-card-button rounded-lg p-2 ${color} ${hoverColor} cursor-pointer`}>
+                                                <div key={i} className={`font-medium w-24 md:w-32 lg:w-40 leading-tight text-center text-xl portfolio-card-button rounded-lg p-2 ${color} ${hoverColor} cursor-pointer`}>
                                                     <Link href={button.link}>
                                                         <a target="_blank">
                                                             {button.text}
