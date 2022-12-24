@@ -82,7 +82,7 @@ const SideBar: React.FC<pageProps> = ({title, footer, props}) => {
 
         window.addEventListener('resize', updateMedia);
         return () => window.removeEventListener('resize', updateMedia);
-    });
+    }, []);
 
     useEffect(() => {
         const scroll = activeScroll;
@@ -100,7 +100,7 @@ const SideBar: React.FC<pageProps> = ({title, footer, props}) => {
         updateMedia()
         window.addEventListener('resize', updateMedia);
         return () => window.removeEventListener('resize', updateMedia);
-    });
+    }, []);
     
     
     return (

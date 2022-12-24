@@ -72,7 +72,7 @@ const AboutInfo: React.FC<pageProps> = ({
 
                                     <Button onClick={handleOpen}>
                                         <Tooltip title="View.">
-                                        <div className="flex group max-h-[600px] max-w-[400px] transition-all duration-700 ease-in-out pb-10">
+                                        <div className="flex group max-h-[600px] max-w-[370px] transition-all duration-700 ease-in-out pb-10">
                                                         <Image
                                                         className='group'
                                                         src={portrait} 
