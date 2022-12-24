@@ -37,9 +37,9 @@ const Resume: React.FC<pageProps> = ({
                             Education
                         </header>
                         {
-                            education.map((bullet) => {
+                            education.map((bullet, i) => {
                                 return(
-                                    <TimeBullet title = {bullet.title} years = {bullet.years} location = {bullet.location} image = {bullet.image} wide={bullet.wide}/>
+                                    <TimeBullet key={i} title = {bullet.title} years = {bullet.years} location = {bullet.location} image = {bullet.image} wide={bullet.wide} />
                                 )
                             })
                         }                        
@@ -49,9 +49,9 @@ const Resume: React.FC<pageProps> = ({
                         Work Experience
                     </header>
                         {
-                            work.map((bullet) => {
+                            work.map((bullet, i) => {
                                 return(
-                                    <TimeBulletPoints title = {bullet.title} years = {bullet.years} position = {bullet.position} image = {bullet.image} large={bullet.wide}
+                                    <TimeBulletPoints key={i} title = {bullet.title} years = {bullet.years} position = {bullet.position} image = {bullet.image} large={bullet.wide}
                                         points = {
                                             bullet.points
                                         }
