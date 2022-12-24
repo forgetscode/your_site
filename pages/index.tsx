@@ -25,6 +25,7 @@ import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CalculateIcon from '@mui/icons-material/Calculate';
 
+
 const Home: NextPage = () => {
   const { mode } = useColorMode()
 
@@ -88,13 +89,13 @@ const Home: NextPage = () => {
         facts={
           [
             {
-              icon:<GitHubIcon className="h-16 w-16"/>,
+              icon:<GitHubIcon style={{ fontSize: 48 }}/>,
               titleMark:"308",
               title:"Github contributions",
               info:"in 2022.",
             },
             {
-              icon:<CalculateIcon className='h-16 w-16'/>,
+              icon:<CalculateIcon style={{ fontSize: 48 }}/>,
               titleMark:"A+",
               title:"In Calculus",
               info:"at SFU.",
