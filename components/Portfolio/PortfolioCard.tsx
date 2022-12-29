@@ -1,7 +1,7 @@
 import { Tooltip } from '@mui/material';
 import Link from 'next/link';
 import * as React from 'react';
-import { useColorMode } from '../context/ColorModeContext';
+import { useColorMode } from '../../context/ColorModeContext';
 
 const Fade = require("react-reveal/Fade")
 

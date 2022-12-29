@@ -31,8 +31,8 @@ const TimeBullet: React.FC<pageProps> = ({title, years, position, points, image,
                     <div className="-mb-1 -ml-2.5 relative second-bg-theme rounded-full h-6 w-6 flex justify-center items-center z-20">
                         <div className="bg-white rounded-full h-4 w-4"/>
                     </div>
-                    <div className={`relative h-[550px] w-6 z-10`}>
-                        <div className={`w-0.5 h-[600px] second-bg-theme z-10`}></div>
+                    <div className={`relative h-[525px] w-6 z-10`}>
+                        <div className={`w-0.5 h-[575px] second-bg-theme z-10`}></div>
                     </div>
                 </div>
                 <div className='flex flex-col space-y-2 md:-mt-1.5'>

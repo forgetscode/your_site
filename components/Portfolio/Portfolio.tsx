@@ -29,7 +29,7 @@ const Portfolio: React.FC<pageProps> = ({
     props
   }) => {
     return (
-        <div id = {"Portfolio"} className="w-full flex justify-center bg-white py-16">
+        <div id = {"Portfolio"} className="w-full flex justify-center bg-white mt-16">
         <div className='flex flex-col w-full bg-white space-y-16 lg:ml-72'>
           <p className="flex pt-10 header-text pb-12 justify-center"> PORTFOLIO</p>
           {

@@ -68,7 +68,7 @@ const AboutInfo: React.FC<pageProps> = ({
                     </div>
                     <div className="w-full flex justify-center">
                         <div className="w-4/6 justify-center flex flex-col md:flex-row md:space-x-6">
-                            <Fade left={true} duration={2000}>
+                            <Fade left={true}>
 
                                     <Button onClick={handleOpen}>
                                         <Tooltip title="View.">
@@ -76,6 +76,8 @@ const AboutInfo: React.FC<pageProps> = ({
                                                         <Image
                                                         className='group'
                                                         src={portrait} 
+                                                        height={600}
+                                                        width={370}
                                                         placeholder="blur"
                                                         alt=''
                                                         priority            

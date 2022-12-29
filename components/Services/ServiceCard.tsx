@@ -14,7 +14,7 @@ const ServicesLayout: React.FC<pageProps> = ({title, text, icon, iconColor}) => 
                     <div className="flex w-full justify-center">
                         <ServiceIcon icon={icon} colorCode={iconColor}/>
                     </div>
-                    <p className = "font-bold text-2xl sub-header-text">
+                    <p className = "font-bold text-2xl sub-header-text text">
                         {title}
                     </p>
                     <p className="font-medium font-poppins">

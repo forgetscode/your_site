@@ -21,7 +21,7 @@
     }
 
     .second-text-theme{
-      @apply text-sky-300  dark:text-sky-700 transition-all
+      @apply text-sky-300 dark:text-sky-700 transition-all
     }
 
     .second-bg-theme{
