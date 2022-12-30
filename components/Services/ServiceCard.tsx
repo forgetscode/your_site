@@ -35,7 +35,7 @@ const ServicesLayout: React.FC<pageProps> = ({title, text, icon, iconColor, desc
             </button>
             <Modal open={open} onClose={handleClose}>
             <div className="z-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out rounded-lg
-                     md:w-[480px] w-[340px] min-w-[340px] min-h-[340px] max-h-[700px] bg-white lg:ml-36">
+                     max-w-3/6 min-w-[340px] min-h-[340px] max-h-4/6 bg-white lg:ml-36">
                         <div className="flex flex-col space-y-4 p-4">
                             <div className="flex w-full justify-center">
                                 <ServiceIcon icon={icon} colorCode={iconColor}/>
