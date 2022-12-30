@@ -14,7 +14,6 @@ const Footer = () => {
     const { mode } = useColorMode()
     return (
         <div className={`${mode === "dark" ? 'dark' : ''}`}>
-            <Fade bottom={true} duration={1000}>
                 <div id = {"Contact"}>
                     <div className='bg-gray-400 dark:bg-slate-900 h-full w-full flex flex-col'>
                         <div className='w-full h-full space-y-6 lg:pl-72'>
@@ -156,7 +155,6 @@ const Footer = () => {
                         </footer>
                     </div>
                 </div>
-            </Fade>
         </div>
     );
 };
