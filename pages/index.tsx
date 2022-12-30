@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="lg:ml-[350px]">
-        <FadeInHomeText title={"Michael Gergely"} texts={['Front-end Developer.', 'Back-End Developer.', 'Blockchain-Developer.', 'Web Developer.']}/>
+        <FadeInHomeText title={"Michael Gergely"} texts={['Front-end Developer.', 'Back-End Developer.', 'Web Developer.']}/>
       </div>
 
       <div className="flex flex-col w-full bg-white">
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
         bio= {`Fascinated by the bleeding edge of technology, I am constantly seeking new ways to expand my knowledge and skills.
           After earning my Bachelor's degree in Computer Science and Microbiology and Biochemistry from Simon Fraser University, 
           I have gained experience working with React, cloud services, and blockchain technology. 
-          Recently, I have been particularly interested in AI image generation and am constantly seeking opportunities to combine and showcase my diverse 
+          Recently, I have been particularly interested in AI image generation and am constantly seeking opportunities showcase my diverse 
           skill set.
           `}
         title={"Web Developer & Full Stack Engineer"}
@@ -74,23 +74,23 @@ const Home: NextPage = () => {
         points={
           [
             {title:"Phone", info:"778-789-3561"},
-            {title:"Location", info:"Vancouver, BC, Canada"},
+            {title:"Location", info:"Vancouver, Canada"},
             {title:"University", info:"Simon Fraser University"},
             {title:"Email",  info:"Michael.v.y.gergely@gmail.com"},
           ]
         }
         quote={`You miss 100% of the shots you don't take.`}
-        quoteAuthor={"Wayne Gretzky"}
+        quoteAuthor={"- Wayne Gretzky"}
         facts={
           [
             {
-              icon:<GitHubIcon style={{ fontSize: 48 }}/>,
+              icon:<GitHubIcon style={{ fontSize: 64 }}/>,
               titleMark:"308",
               title:"Github contributions",
               info:"in 2022.",
             },
             {
-              icon:<CalculateIcon style={{ fontSize: 48 }}/>,
+              icon:<CalculateIcon style={{ fontSize: 64 }}/>,
               titleMark:"A+",
               title:"In Calculus",
               info:"at SFU.",
@@ -102,21 +102,21 @@ const Home: NextPage = () => {
           [
             {
               title:"HTML",
-              percentage:"90%",
+              percentage:"80%",
               titleSecond:"CSS",
-              percentageSecond:"90%",
+              percentageSecond:"80%",
             },
             {
               title:"Javascript",
-              percentage:"90%",
+              percentage:"80%",
               titleSecond:"Typescript",
-              percentageSecond:"90%",
+              percentageSecond:"80%",
             },
             {
               title:"React",
-              percentage:"90%",
+              percentage:"80%",
               titleSecond:"Tailwind",
-              percentageSecond:"90%",
+              percentageSecond:"80%",
             },
             {
               title:"NextJS",
@@ -203,8 +203,8 @@ const Home: NextPage = () => {
               wide:false,
               points:
                 [
-                  "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata allowing me to efficiently gather and analyze data, providing valuable insights for our clients and helping them improve their online presence.",
-                  "Implemented a new feature on the company's e-commerce platform using React, resulting in a 20% increase in conversion rate. Utilized React's reusable components and efficient performance to quickly prototype and deploy the feature, and collaborated with the design team to ensure a seamless user experience.",
+                  "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata allowing efficient gathering and analysis of data, providing valuable insights for our clients to improve their online presence.",
+                  "Implemented a new feature on the company's e-commerce platform using React, resulting in a 20% increase in conversion rate. Utilized React's reusable components and efficient performance to quickly prototype and deploy the feature collaborating with the design team to ensure a seamless user experience.",
                 ]
             },
             {
@@ -215,7 +215,7 @@ const Home: NextPage = () => {
               wide:true,
               points:
                 [
-                  "Utilized multi-core processors to perform parallel sequencing of lab samples to increase server processing speed by 15x",
+                  "Utilized multi-core processors to perform parallel sequencing of lab samples to increase server processing speed by 15x.",
                   "Led the development of a front-end interface for lab technicians, conducting interviews with technicians to identify key features and relevant calculations that would streamline sample analysis.",
                   "Implemented a system logging procedure that facilitated early identification of inconsistent, incomplete, or failing samples, resulting in faster feedback loops between departments.",
                 ]
@@ -259,11 +259,17 @@ const Home: NextPage = () => {
               project:"Zelda",
               title:"Stack",
               text:"React, Tailwind, Typescript, Javascript, NextJS for frontend, and Solana blockchain used as backend.",
+              description:`The Zelda messaging application utilizes the cutting-edge technology of the Solana blockchain to offer a truly 
+              decentralized and serverless messaging experience. By leveraging smart contracts, the application allows users to securely 
+              and efficiently communicate with each other without relying on any centralized server or third party. This means that users can 
+              enjoy the freedom and privacy of a truly peer-to-peer platform, with the added benefits of fast transaction speeds and low fees provided by the solana blockchain.
+               Whether you're looking to stay in touch with friends and family, or you need a secure and reliable communication tool for your business, 
+               this messaging application is the perfect choice.`,
               color:"text-teal-600",
               hoverColor:"hover:text-teal-400",
               buttons:[
                 {text:"GitHub", link:"https://github.com/forgetscode/zelda"},
-                {text:"Smart Contract", link:"https://github.com/forgetscode/sms2"},
+                {text:"Smart Contract", link:"https://github.com/forgetscode/sms/blob/main/programs/sms/src/lib.rs"},
                 {text:"Video Demo", link:"https://www.youtube.com/watch?v=XKThYf5cnqk"},
               ]
             },
@@ -271,12 +277,15 @@ const Home: NextPage = () => {
               link:"https://forgetspractice.com/",
               project:"Sosmo",
               title:"Stack",
-              text:"NodeJS, ExpressJS, PostrgeSQL, TypeORM, GraphQL, Apollo, Redis backend hosted on cloud service in Conjunction with Solana blockchain for programatic value transfer of job contracts. Typescript, React, Tailwind front end.",
-              color:"text-white",
-              hoverColor:"hover:text-gray-300",
+              text:"NodeJS, ExpressJS, PostrgeSQL, TypeORM, GraphQL, Apollo, Redis backend hosted on the cloud service Digital Ocean in Conjunction with Solana blockchain for programatic value transfer of job contracts. Typescript, React, Tailwind front end.",
+              description:`The Sosmo job posting site utilizes the Solana blockchain and a powerful graphql server hosted on a cloud service to facilitate the posting and funding of jobs. 
+              Through the use of smart contracts, the site offers a secure and efficient way for users to deposit funds that will be automatically transferred upon completion of the job, with the contract serving as a trusted authority. 
+              This innovative approach to job posting and payment offers unparalleled convenience and reliability.`,
+              color:"text-slate-400",
+              hoverColor:"hover:text-slate-500",
               buttons:[
                 {text:"GitHub", link:"https://github.com/forgetscode/sosmo"},
-                {text:"Smart Contract", link:"https://github.com/forgetscode/agreement"},
+                {text:"Smart Contract", link:"https://github.com/forgetscode/agreement/blob/main/programs/agreement/src/lib.rs"},
                 {text:"Video Demo", link:"https://www.youtube.com/watch?v=XKThYf5cnqk"},
               ]
             },
@@ -285,6 +294,10 @@ const Home: NextPage = () => {
               project:"Nextflix",
               title:"Stack",
               text:"NodeJS, ExpressJS, PostrgeSQL, TypeORM, GraphQL, Apollo, Redis backend hosted on cloud service in Conjunction with Solana blockchain for programatic value transfer of job contracts. Typescript, React, Tailwind front end.",
+              description:`Nextflix is a clone of Netflix that utilizes server-side rendering to display movie data and uses Firebase as a backend service. 
+              Features included are the ability to play trailers for movies, search for movies, add movies to a watchlist, and upvote or downvote movies.
+              The site also integrates with Stripe payments through Firebase, allowing users to purchase subscription plans with the stripe development portal through a test credit card to unlock certain features. 
+              This project was created as a technical demo.`,
               color:"text-sky-600",
               hoverColor:"hover:text-sky-400",
               buttons:[

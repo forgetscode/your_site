@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@layer base {
+  body { 
+    position: absolute;
+    right: -17px;
+    overflow-x: hidden;
+  }
+}
+
 @layer components {
     .button-theme{
       @apply bg-gray-600 dark:bg-slate-900
@@ -81,9 +89,10 @@
     }
 
     .portfolio-card-bg{
-      @apply bg-gray-500 dark:bg-gray-900
+      @apply bg-white dark:bg-gray-900
     }
+
     .portfolio-card-button{
-      @apply bg-gray-600 dark:bg-black
+      @apply bg-gray-300 dark:bg-black
     }
   }

@@ -14,6 +14,7 @@ interface portfolio {
   project: string,
   title: string,
   text: string,
+  description: string,
   color:string,
   hoverColor:string,
   buttons: button[],
@@ -29,9 +30,11 @@ const Portfolio: React.FC<pageProps> = ({
     props
   }) => {
     return (
-        <div id = {"Portfolio"} className="w-full flex justify-center bg-white mt-16">
-        <div className='flex flex-col w-full bg-white space-y-16 lg:ml-72'>
-          <p className="flex pt-10 header-text pb-12 justify-center"> PORTFOLIO</p>
+      <div id = {"Portfolio"} className="w-full flex justify-center bg-white mt-16">
+        <div className='flex flex-col md:w-4/6 bg-white space-y-16 lg:ml-72'>
+          <Fade bottom={true} duration={1000}>
+            <p className="flex header-text pt-16 justify-center"> PORTFOLIO</p>
+          </Fade>
           {
             props.map((prop, index) => {
               return(
@@ -40,6 +43,7 @@ const Portfolio: React.FC<pageProps> = ({
                   project = {prop.project}
                   title = {prop.title}
                   text = {prop.text}
+                  description = {prop.description}
                   color = {prop.color}
                   hoverColor = {prop.hoverColor}
                   buttons = {prop.buttons}

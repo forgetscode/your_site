@@ -1,4 +1,4 @@
-import { Box, Button, Modal, Tooltip } from '@mui/material';
+import { Button, Modal, Tooltip } from '@mui/material';
 import Image from 'next/image'
 import { useState } from 'react';
 import { useColorMode } from '../../context/ColorModeContext';
@@ -59,25 +59,28 @@ const AboutInfo: React.FC<pageProps> = ({
     return(
         <div className={`${mode === "dark" ? 'dark' : ''}`}>
             <div className="flex w-full bg-white" id = {"About"}>
-                <div className='flex flex-col bg-white space-y-8 justify-center lg:ml-72'>
-                    <p className="w-full flex justify-center header-text">ABOUT</p>
+                <div className='flex flex-col bg-white space-y-8 justify-center lg:ml-72 '>
+                    <Fade bottom={true} duration={1000}>
+                        <p className="w-full flex justify-center header-text">ABOUT</p>
+                    </Fade>
                     <div className="w-full flex justify-center">
-                        <p className="text-center w-4/6 body-text dark:dark-body-text pt-6 lg:pt-0 pb-20 lg:pb-10">
-                        {bio} 
-                        </p>
+                        <Fade bottom={true} duration={1000}>
+                            <p className="text-center w-4/6 body-text dark:dark-body-text pt-6 lg:pt-0 pb-20 lg:pb-10">
+                            {bio} 
+                            </p>
+                        </Fade>
                     </div>
                     <div className="w-full flex justify-center">
                         <div className="w-4/6 justify-center flex flex-col md:flex-row md:space-x-6">
                             <Fade left={true}>
-
                                     <Button onClick={handleOpen}>
                                         <Tooltip title="View.">
-                                        <div className="flex group max-h-[600px] max-w-[370px] transition-all duration-700 ease-in-out pb-10">
+                                        <div className="flex group max-h-[600px] max-w-[400px] transition-all duration-700 ease-in-out pb-10">
                                                         <Image
                                                         className='group'
                                                         src={portrait} 
                                                         height={600}
-                                                        width={370}
+                                                        width={400}
                                                         placeholder="blur"
                                                         alt=''
                                                         priority            
@@ -86,8 +89,7 @@ const AboutInfo: React.FC<pageProps> = ({
                                         </Tooltip>
                                     </Button>
                                     <Modal open={open} onClose={handleClose}>
-                                        <div className='relative'>
-                                            <div className="z-30 absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/3 transition-all duration-700 ease-in-out
+                                            <div className="z-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3 transition-all duration-700 ease-in-out
                                             md:h-[480px] md:w-[480px] h-[340px] w-[340px] min-w-[340px] min-h-[340px]">
                                                 <Image
                                                 className='group'
@@ -96,7 +98,6 @@ const AboutInfo: React.FC<pageProps> = ({
                                                 alt=''
                                                 priority            
                                                 />
-                                            </div>
                                         </div>
                                     </Modal>
                                     
@@ -130,7 +131,9 @@ const AboutInfo: React.FC<pageProps> = ({
                         </p>
                     </Fade>
 
-                    <p className="w-full flex justify-center header-text"> Facts</p>
+                    <Fade bottom={true} duration={1000}>
+                        <p className="w-full flex justify-center header-text"> Facts</p>
+                    </Fade>
                     
                     <Fade bottom={true} duration={1000}>
                         <div className="w-full flex justify-center pb-16">
@@ -150,7 +153,10 @@ const AboutInfo: React.FC<pageProps> = ({
                         </div>
                     </Fade>
 
-                    <p className="w-full flex justify-center header-text pb-16"> Skills</p>
+                    <Fade bottom={true} duration={1000}>
+                        <p className="w-full flex justify-center header-text pb-16"> Skills</p>
+                    </Fade>
+
                     {
                         skills.map((skill, index) => (
                             <div className='w-full flex flex-col items-center md:flex-row space-y-6 md:space-y-0 md:space-x-20 justify-center' key={index}>

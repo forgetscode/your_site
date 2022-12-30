@@ -4,6 +4,7 @@ import ServiceCard from './ServiceCard'
 type Service = {
     title: string,
     text: string,
+    description: string,
     icon: string,
     iconColor: string,
 }
@@ -24,7 +25,7 @@ const ServicesLayout: React.FC<pageProps> = ({props}) => {
                             
                             <div key={i}>
                                 
-                                    <ServiceCard title = {service.title} text={service.text} icon={service.icon} iconColor = {service.iconColor}></ServiceCard>
+                                    <ServiceCard title = {service.title} text={service.text} icon={service.icon} iconColor = {service.iconColor} description = {service.description}></ServiceCard>
                                 
                             </div>
                             

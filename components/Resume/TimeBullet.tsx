@@ -26,7 +26,7 @@ const TimeBullet: React.FC<pageProps> = ({title, years, location, image, wide}) 
                         </div>
                     </div>
                     <div className='flex flex-col md:-mt-1.5'>
-                        <p className=" font-medium font-poppins leading-tight md:text-2xl second-text-theme max-w-32"> {title}</p>
+                        <p className=" font-medium font-poppins leading-tight text-xl md:text-2xl second-text-theme max-w-32 "> {title}</p>
                         <div className="flex flex-col pt-2 space-y-2">
                             <div className="bg-gray-200 text-center w-24">
                                 <p className="text-black font-poppins font-medium text-sm p-1 rounded-lg"> {years} </p>
