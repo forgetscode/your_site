@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @layer base {
+  body {
+    @apply bg-white dark:bg-zinc-900;
+  }
   body { 
     position: absolute;
     right: -17px;
@@ -13,7 +16,11 @@
 
 @layer components {
     .button-theme{
-      @apply bg-gray-600 dark:bg-slate-900
+      @apply bg-gray-600 hover:bg-black dark:bg-black dark:hover:bg-gray-900
+    }
+
+    .bg-color{
+      @apply bg-white dark:bg-zinc-900
     }
     
     .light-text {
@@ -29,23 +36,23 @@
     }
 
     .second-text-theme{
-      @apply text-sky-300 dark:text-sky-700 transition-all
+      @apply text-sky-600 dark:text-sky-600 transition-all
     }
 
     .second-bg-theme{
-        @apply bg-sky-300 dark:bg-sky-700 transition-all
+        @apply bg-sky-600 dark:bg-sky-600 transition-all
       }
   
     .icon-color{
-      @apply text-sky-200 dark:dark-text
+      @apply text-sky-600 dark:dark-text
     }
 
     .decoration-color{
-        @apply decoration-sky-200 dark:decoration-sky-600 transition-all
+        @apply decoration-sky-600 dark:decoration-sky-600 transition-all
     }
     
     .side-bg{
-      @apply bg-gradient-to-r from-gray-400 to-white via-gray-400 shadow-md shadow-gray-400
+      @apply bg-gradient-to-r from-gray-400 to-white via-gray-400
     }
   
     .side-bg-dark{
@@ -65,7 +72,7 @@
     }
   
     .social-icon{
-      @apply bg-gray-600 dark:bg-gray-900 hover:bg-sky-300 dark:hover:bg-sky-600 text-white rounded-full text-sm p-2 flex items-center justify-center
+      @apply bg-gray-600 dark:bg-gray-900 hover:bg-sky-600 dark:hover:bg-sky-600 text-white rounded-full text-sm p-2 flex items-center justify-center
     }
   
     .side-icon{
@@ -77,22 +84,22 @@
     }
 
     .header-text{
-        @apply font-medium leading-tight text-4xl mt-0 mb-2 py-10 text-theme decoration-color underline underline-offset-[30px]
+        @apply font-medium leading-tight text-4xl mt-0 mb-2 text-black dark:text-white decoration-color underline underline-offset-[30px]
     }
 
     .sub-header-text{
-        @apply font-poppins font-medium leading-tight text-3xl second-text-theme 
+        @apply font-medium leading-tight text-3xl second-text-theme 
     }
 
     .body-text {
-        @apply font-poppins text-black 
+        @apply text-black dark:text-white
     }
 
     .portfolio-card-bg{
-      @apply bg-white dark:bg-gray-900
+      @apply bg-white dark:bg-[#141414]
     }
 
     .portfolio-card-button{
-      @apply bg-gray-300 dark:bg-black
+      @apply bg-gray-400 hover:bg-gray-600 text-white dark:bg-black dark:hover:bg-slate-900
     }
   }

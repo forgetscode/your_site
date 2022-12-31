@@ -22,7 +22,7 @@ import Contact from "../components/Contact";
 
 
 const Home: NextPage = () => {
-  const { mode } = useColorMode()
+  const { mode } = useColorMode();
 
   return (
     <div className={`${mode === "dark" ? 'dark' : ''}`}>
@@ -33,22 +33,22 @@ const Home: NextPage = () => {
       </Head>
 
       <SideBar title = "Michael Gergely" footer="Michael Gergely" props = 
-          {
-            [
-              {id:"Home", icon:<HomeOutlinedIcon/>, title: "Home"},
-              {id:"About", icon:<PersonOutlineOutlinedIcon/>, title: "About"},
-              {id:"Resume", icon:<DescriptionOutlinedIcon/>, title: "Resume"},
-              {id:"Portfolio", icon:<BusinessCenterOutlinedIcon/>, title: "Portfolio"},
-              {id:"Services", icon:<EngineeringOutlinedIcon/>, title: "Services"},
-              {id:"Contact", icon:<MailOutlinedIcon/>, title: "Contact"},
-            ]
-          }
-        />
+        {
+          [
+            {id:"Home", icon:<HomeOutlinedIcon/>, title: "Home"},
+            {id:"About", icon:<PersonOutlineOutlinedIcon/>, title: "About"},
+            {id:"Resume", icon:<DescriptionOutlinedIcon/>, title: "Resume"},
+            {id:"Portfolio", icon:<BusinessCenterOutlinedIcon/>, title: "Portfolio"},
+            {id:"Services", icon:<EngineeringOutlinedIcon/>, title: "Services"},
+            {id:"Contact", icon:<MailOutlinedIcon/>, title: "Contact"},
+          ]
+        }
+      />
 
       <div id = {"Home"} className="absolute top-0 "/>
-      <div  className="fixed -z-30 h-full w-full lg:-mt-[400px] brightness-75">
+      <div  className="fixed -z-30 min-h-screen w-full lg:-mt-[400px] lg:brightness-75 bg-zinc-900 ">
         <Image
-            className="absolute "
+            className="absolute"
             src={background}
             layout="responsive"
             placeholder="blur"
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         <FadeInHomeText title={"Michael Gergely"} texts={['Front-end Developer.', 'Back-End Developer.', 'Web Developer.']}/>
       </div>
 
-      <div className="flex flex-col w-full bg-white">
+      <div className="flex flex-col w-full bg-color">
       <AboutInfo 
         bio= {`Fascinated by the bleeding edge of technology, I am constantly seeking new ways to expand my knowledge and skills.
           After earning my Bachelor's degree in Computer Science and Microbiology and Biochemistry from Simon Fraser University, 
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
           skill set.
           `}
         title={"Web Developer & Full Stack Engineer"}
-        info={"Gym Enthusiast, Basketball player, Cat Lover"}
+        info={"Gym Enthusiast, Basketball player, Cat Lover."}
         points={
           [
             {title:"Phone", info:"778-789-3561"},
@@ -197,7 +197,7 @@ const Home: NextPage = () => {
           [
             {
               title:"SEO Tofu",
-              years:"Jan 2020 - November 2021",
+              years:"Jan 2020 - Nov 2021",
               position:"React Developer", 
               image:"/default.svg", 
               wide:false,
@@ -298,8 +298,8 @@ const Home: NextPage = () => {
               Features included are the ability to play trailers for movies, search for movies, add movies to a watchlist, and upvote or downvote movies.
               The site also integrates with Stripe payments through Firebase, allowing users to purchase subscription plans with the stripe development portal through a test credit card to unlock certain features. 
               This project was created as a technical demo.`,
-              color:"text-sky-600",
-              hoverColor:"hover:text-sky-400",
+              color:"text-red-500",
+              hoverColor:"hover:text-red-400",
               buttons:[
                 {text:"GitHub", link:"https://github.com/forgetscode/nextflix"},
               ]

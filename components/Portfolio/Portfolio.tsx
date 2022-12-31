@@ -1,5 +1,3 @@
-import { Tooltip } from '@mui/material';
-import Link from 'next/link';
 import PortfolioCard from './PortfolioCard';
 
 const Fade = require("react-reveal/Fade")
@@ -30,10 +28,10 @@ const Portfolio: React.FC<pageProps> = ({
     props
   }) => {
     return (
-      <div id = {"Portfolio"} className="w-full flex justify-center bg-white mt-16">
-        <div className='flex flex-col md:w-4/6 bg-white space-y-16 lg:ml-72'>
+      <div id = {"Portfolio"} className="w-full flex justify-center">
+        <div className='flex flex-col md:w-4/6 space-y-16 pt-16 lg:ml-72'>
           <Fade bottom={true} duration={1000}>
-            <p className="flex header-text pt-16 justify-center"> PORTFOLIO</p>
+            <p className="flex header-text justify-center"> PORTFOLIO</p>
           </Fade>
           {
             props.map((prop, index) => {

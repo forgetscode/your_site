@@ -29,16 +29,17 @@ const Resume: React.FC<pageProps> = ({
     work,
     }) => {
         return(
-        <div id = {"Resume"} className="w-full flex bg-white ">
-            <div className='flex flex-col w-full space-y-8 bg-white lg:ml-72'>
+        <div id = {"Resume"} className="w-full flex">
+            <div className='flex flex-col w-full pt-16 space-y-16 lg:ml-72'>
                 <Fade bottom={true} duration={1000}>
-                    <p className="w-full flex justify-center header-text py-16"> RESUME</p>
+                    <p className="w-full flex justify-center pb-16 header-text"> RESUME</p>
                 </Fade>
-                <div className="w-4/6 flex justify-center flex-col space-y-16 md:space-y-0 md:flex-row bg-white mx-auto">
-                        <div className="w-full flex bg-white md:justify-center">
-                            <div className="flex flex-col bg-white pb-20">
+
+                <div className="w-4/6 md:w-5/6 xl:w-4/6 flex justify-center flex-col md:space-y-0 md:flex-row mx-auto">
+                        <div className="w-full flex md:justify-center pb-8">
+                            <div className="flex flex-col pb-16">
                                 <Fade bottom={true} duration={1000}>
-                                    <header className="flex header-text pb-20">
+                                    <header className="flex header-text pb-14 header-text text-3xl">
                                         Education
                                     </header>
                                 </Fade>
@@ -51,10 +52,10 @@ const Resume: React.FC<pageProps> = ({
                                 } 
                             </div>                       
                         </div>
-                        <div className="w-full flex bg-white md:justify-center">
-                            <div className="flex flex-col bg-white pb-20">
+                        <div className="w-full flex md:justify-center">
+                            <div className="flex flex-col">
                                 <Fade bottom={true} duration={1000}>
-                                    <header className="flex header-text pb-20 ">
+                                    <header className="flex header-text text-3xl pb-14">
                                         Work Experience
                                     </header>
                                 </Fade>

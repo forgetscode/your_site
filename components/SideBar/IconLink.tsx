@@ -10,16 +10,18 @@ interface pageProps {
 }
 
 const SideHeader: React.FC<pageProps> = ({title, icon, link}) => {
-    const { mode } = useColorMode()
+    const { mode } = useColorMode();
 
     return (
         <div className={`${mode === "dark" ? 'dark' : ''}`}>
-            <Link href={link} target="_blank">
-                <Tooltip title={title}>
-                    <span className="social-icon cursor-pointer">
-                        {icon}
-                    </span>
-                </Tooltip>
+            <Link href={link}>
+                <a target="_blank">
+                    <Tooltip title={title}>
+                        <span className="social-icon cursor-pointer">
+                            {icon}
+                        </span>
+                    </Tooltip>
+                </a>
             </Link>
         </div>
     );

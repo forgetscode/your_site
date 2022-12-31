@@ -39,7 +39,7 @@ const SideHeader: React.FC<pageProps> = ({title}) => {
 
             <div className='space-y-8 pt-8'>
                 <div className="w-full flex flex-col justify-center items-center space-y-6 pt-3 transition-all">
-                    <div className="relative w-32 h-32 rounded-full border-4 border-sky-200 dark:border-gray-700">
+                    <div className="relative w-32 h-32 rounded-full border-4 border-gray-700">
                         <Image
                             className="rounded-full transition-all"
                             src={portait}

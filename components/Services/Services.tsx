@@ -16,10 +16,10 @@ interface pageProps {
 
 const Services = () => {
     return (
-        <div id = {"Services"} className="w-full flex justify-center bg-white pb-20">
-            <div className='flex flex-col w-full items-center bg-white lg:ml-72'>
+        <div id = {"Services"} className="w-full flex justify-center pb-16">
+            <div className='flex flex-col w-full items-center lg:ml-72'>
                 <Fade bottom={true} duration={1000}>
-                    <p className="flex py-16 pt-32 header-text"> SERVICES</p>
+                    <p className="flex py-16 pt-16 header-text"> SERVICES</p>
                 </Fade>
                 <div className=''>
                     {/* maximum 3 services per layout*/}
@@ -68,7 +68,7 @@ const Services = () => {
                     {/* maximum 3 services per layout*/}
                     <ServicesLayout props = 
                     {[
-                        {title:"Server Side Rendering", icon:"deliver", iconColor:"text-slate-700", text:"Server side render your data for increased performance using NextJs.",
+                        {title:"Server Side Rendering", icon:"deliver", iconColor:"text-slate-400", text:"Server side render your data for increased performance using NextJs.",
                         description:`Server-side rendering refers to the process of generating the HTML for a web page on the server rather than the client (i.e., the user's web browser). This is in contrast to client-side rendering, which involves generating the HTML for a web page on the client using JavaScript.
 
                         Server-side rendering can be useful in a variety of situations, including when a web page needs to be rendered quickly or when the content of a web page is dynamic and changes frequently. It can also be helpful for search engine optimization (SEO), as search engines are typically better able to index and rank pages that are rendered on the server.
@@ -76,6 +76,7 @@ const Services = () => {
                         Overall, server-side rendering is a technique that can be used to improve the performance and SEO of a web page by generating the HTML for the page on the server rather than the client.`},
                         {title:"Stripe/Crypto payments", icon:"paid", iconColor:"text-green-600", text:"Integrate with Stripe or Blockchain for payments.",
                         description:`Stripe is a payment processing company that enables businesses to accept payments online and in mobile apps. It provides a range of payment services, including support for credit card payments, bank transfers, and cryptocurrency payments.`},
+
                         {title:"Wordpress", icon:"circle", iconColor:"text-indigo-300", text:"Create websites using wordpress.",
                         description:`WordPress is a content management system (CMS) that allows users to easily create and manage websites. It is used by millions of websites around the world and is known for its ease of use and flexibility.
 
