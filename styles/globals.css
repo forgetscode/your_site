@@ -7,11 +7,6 @@
   body {
     @apply absolute bg-white dark:bg-zinc-900  ;
   }
-  body { 
-    position: absolute;
-    right: -34px;
-    overflow-x: hidden;
-  }
 }
 
 @layer components {
