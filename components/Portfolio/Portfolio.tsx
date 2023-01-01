@@ -29,7 +29,7 @@ const Portfolio: React.FC<pageProps> = ({
   }) => {
     return (
       <div id = {"Portfolio"} className="w-full flex justify-center">
-        <div className='flex flex-col md:w-4/6 space-y-16 pt-16 lg:ml-72'>
+        <div className='flex flex-col md:w-4/6 space-y-20 pt-16 lg:ml-72'>
           <Fade bottom={true} duration={1000}>
             <p className="flex header-text justify-center"> PORTFOLIO</p>
           </Fade>

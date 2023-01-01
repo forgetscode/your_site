@@ -5,11 +5,11 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-zinc-900;
+    @apply absolute bg-white dark:bg-zinc-900  ;
   }
   body { 
     position: absolute;
-    right: -17px;
+    right: -34px;
     overflow-x: hidden;
   }
 }
@@ -100,6 +100,6 @@
     }
 
     .portfolio-card-button{
-      @apply bg-gray-400 hover:bg-gray-600 text-white dark:bg-black dark:hover:bg-slate-900
+      @apply bg-gray-400 hover:bg-gray-600 text-white dark:bg-black dark:hover:bg-gray-800
     }
   }

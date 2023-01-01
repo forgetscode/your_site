@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <div className={`${mode === "dark" ? 'dark' : ''}`}>
                 <div id = {"Contact"}>
-                    <div className='bg-gray-400 dark:bg-zinc-800 h-full w-full flex flex-col border-t-4 border-gray-700'>
+                    <div className='bg-gray-400 dark:bg-zinc-800 h-full w-full flex flex-col border-t-4 border-sky-600'>
                         <div className='w-full h-full space-y-6 lg:pl-72'>
                             <p className="w-full flex justify-center header-text !text-white py-16">CONTACT</p>
                             <div className="container px-5 mx-auto ">
@@ -133,10 +133,10 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <footer className="bg-gray-900 text-white py-4">
+                        <footer className="bg-zinc-900 text-white py-4">
                             <div className="mx-auto flex flex-wrap items-center justify-between px-32 py-2">
                                 <div className="w-full md:w-4/12 px-4 text-center md:text-left">
-                                    <p className="text-xs lg:pl-72">
+                                    <p className="text-gray-400 text-xs lg:pl-72">
                                         Copyright 2022 - All rights reserved
                                     </p>
                                 </div>

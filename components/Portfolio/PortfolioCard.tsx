@@ -39,7 +39,7 @@ const PortfolioCard: React.FC<pageProps> = ({
         return (
             <div className={`${mode === "dark" ? 'dark' : ''} flex justify-center`}>
                 <Fade bottom={true}> 
-                    <div className='w-5/6 min-h-[400px] portfolio-card-bg rounded-3xl shadow-2xl '>
+                    <div className='w-5/6 min-h-[400px] portfolio-card-bg rounded-3xl shadow-2xl dark:shadow-gray-800 '>
                         <div className="flex flex-col md:flex-row w-full h-full">
                             <div className="md:w-2/5 w-full md:h-full !shadow-sm md:rounded-l-3xl md:rounded-r-none rounded-t-3xl">
                                 <Link href={link}>
@@ -47,12 +47,12 @@ const PortfolioCard: React.FC<pageProps> = ({
                                         <Tooltip title="Open">
                                             <div className=
                                                 {
-                                                    `h-full flex flex-row p-4 rounded-xl items-center justify-center 
+                                                    `h-full flex flex-row p-6 rounded-xl items-center justify-center 
                                                     cursor-pointer ${color} ${hoverColor}
                                                     md:hover:scale-110 px-1 transition-all ease-in-out duration-500`
                                                 }
                                             >
-                                                <p className='italic text-3xl md:text-4xl'>{project}</p>
+                                                <p className='italic text-4xl'>{project}</p>
                                             </div>
                                         </Tooltip>
                                     </a>
@@ -79,7 +79,7 @@ const PortfolioCard: React.FC<pageProps> = ({
                                     {
                                         buttons.map((button, i) => {
                                             return (
-                                                <div key={i} className={`font-medium w-40 leading-tight text-center text-xl portfolio-card-button rounded-lg p-2 cursor-pointer`}>
+                                                <div key={i} className={`font-medium w-40 leading-tight text-center text-xl portfolio-card-button rounded-lg p-2 py-4 cursor-pointer`}>
                                                     <Link href={button.link}>
                                                         <a target="_blank">
                                                             {button.text}
