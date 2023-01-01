@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply absolute bg-white dark:bg-zinc-900  ;
+    @apply absolute bg-white dark:bg-zinc-900 md:-right-5 overflow-x-hidden ;
   }
 }
 
