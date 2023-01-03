@@ -150,7 +150,7 @@ const Footer = () => {
                                         </form>
                                         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center"/>
 
-                                        <div className='flex flex-col space-y-16 pb-8'>
+                                        <div className='flex flex-col space-y-8 pb-8'>
                                             <div className="flex flex-row space-x-1">
                                                 <LocationOnIcon sx={{ fontSize: 28 }} className="text-sky-600 "/>
                                                 <div className="flex flex-row items-end">
