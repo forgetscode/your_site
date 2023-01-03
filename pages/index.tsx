@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import SideBar from "../components/SideBar/SideBar";
 import { useColorMode } from "../context/ColorModeContext";
@@ -46,7 +45,7 @@ const Home: NextPage = () => {
       />
 
       <div id = {"Home"} className="absolute top-0 "/>
-      <div  className="fixed -z-30 min-h-screen w-full lg:-mt-[400px] lg:brightness-75 bg-zinc-900 ">
+      <div  className="fixed -z-30 min-h-screen w-full lg:-mt-[400px] lg:brightness-75 bg-white dark:bg-zinc-900 ">
         <Image
             className="absolute"
             src={background}
