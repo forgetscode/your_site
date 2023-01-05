@@ -48,7 +48,11 @@ const Footer = () => {
 
         const res =  await fetch('/api/mail', {
             method: 'POST',
-            body: JSON.stringify(emailParam)
+            body: JSON.stringify({
+                email: formState.email,
+                fullname: formState.name,
+                message: formState.message,
+              }),
         });
 
         const { error } = await res.json();
@@ -170,7 +174,7 @@ const Footer = () => {
                                                         Email:
                                                     </p>
                                                     <p className="text-white pl-1 text-lg">
-                                                        Michael.v.y.gergely@gmail.com
+                                                        michael.v.y.gergely@gmail.com
                                                     </p>
                                                 </div>
                                             </div>
@@ -238,7 +242,5 @@ const Footer = () => {
 };
 
 export default Footer;
-function emailAPIKeyExpired(arg0: string, arg1: string, arg2: string, arg3: string) {
-    throw new Error('Function not implemented.');
-}
+
 
