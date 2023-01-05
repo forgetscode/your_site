@@ -31,6 +31,7 @@ export default async function handler(req, res) {
                     <p>${req.body.message}</p>
                     <br>
                     </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vsmart_logo.svg/402px-Vsmart_logo.svg.png?20200810165214" class="logo-image" style="height: 50px;width: 50px;border-radius: 5px;overflow: hidden;">
                     <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;">Regards<br>Michael Gergely<br>Software Developer<br>+1 778-789-3561</p>
                     <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
                     <a href="https://michael-gergely.vercel.app/" style="text-decoration: none;margin: 8px;color: #9CA3AF;">Website</a>
@@ -48,6 +49,7 @@ export default async function handler(req, res) {
     }
 
     catch (error) {
+        console.log(error);
         return res.status(error.statusCode || 500).json({ error: error.message });
     }
     return res.status(200).json({ error: "" });

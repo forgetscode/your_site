@@ -50,9 +50,12 @@ const Footer = () => {
             method: 'POST',
             body: JSON.stringify({
                 email: formState.email,
-                fullname: formState.name,
+                name: formState.name,
                 message: formState.message,
               }),
+            headers: {
+            "Content-Type": "application/json",
+            },
         });
 
         const { error } = await res.json();
