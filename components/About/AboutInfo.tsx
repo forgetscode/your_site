@@ -64,7 +64,7 @@ const AboutInfo: React.FC<pageProps> = ({
                         <p className="w-full flex justify-center header-text">ABOUT</p>
                     </Fade>
                     <div className="w-full flex justify-center">
-                        <Fade bottom={true}>
+                        <Fade>
                             <p className="text-center w-4/6 body-text">
                                 {bio} 
                             </p>
