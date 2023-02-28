@@ -202,8 +202,8 @@ const Home: NextPage = () => {
                 wide:false,
                 points:
                   [
-                    "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata allowing efficient gathering and analysis of data, providing valuable insights for our clients to improve their online presence.",
-                    "Implemented a new feature on the company's e-commerce platform using React, resulting in a 20% increase in conversion rate. Utilized React's reusable components and efficient performance to quickly prototype and deploy the feature collaborating with the design team to ensure a seamless user experience.",
+                    "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata providing valuable insights for our clients to improve their online presence.",
+                    "Implemented reusable React components, resulting in an increased conversion rate collaborating with the design team to ensure a seamless user experience.",
                   ]
               },
               {
