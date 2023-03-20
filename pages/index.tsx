@@ -195,18 +195,6 @@ const Home: NextPage = () => {
           work={
             [
               {
-                title:"SEO Tofu",
-                years:"Jan 2020 - Nov 2021",
-                position:"React Developer", 
-                image:"/default.svg", 
-                wide:false,
-                points:
-                  [
-                    "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata providing valuable insights for our clients to improve their online presence.",
-                    "Implemented reusable React components, resulting in an increased conversion rate collaborating with the design team to ensure a seamless user experience.",
-                  ]
-              },
-              {
                 title:"BC Centre for Disease Control",
                 years:"Jan 2019 - April 2019",
                 position:"Software Developer", 
@@ -254,7 +242,21 @@ const Home: NextPage = () => {
           {
             [
               {
-                link:"https://zelda-ten.vercel.app/",
+                link:"https://movie-tau-five.vercel.app/",
+                project:"Movie Night",
+                title:"Stack",
+                text:"PostrgeSQL, Supabase for backend, NextJS, Typescript, React, Tailwind for front end.",
+                description:`The Sosmo job posting site utilizes the Solana blockchain and a powerful graphql server hosted on a cloud service to facilitate the posting and funding of jobs. 
+                Through the use of smart contracts, the site offers a secure and efficient way for users to deposit funds that will be automatically transferred upon completion of the job, with the contract serving as a trusted authority. 
+                This innovative approach to job posting and payment offers unparalleled convenience and reliability.`,
+                color:"text-blue-500",
+                hoverColor:"hover:text-blue-600",
+                buttons:[
+                  {text:"GitHub", link:"https://github.com/forgetscode/movie"},
+                ]
+              },
+              {
+                link:"https://michael-gergely.vercel.app/",
                 project:"Zelda",
                 title:"Stack",
                 text:"React, Tailwind, Typescript, Javascript, NextJS for frontend, and Solana blockchain used as backend.",
