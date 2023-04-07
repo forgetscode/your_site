@@ -195,6 +195,34 @@ const Home: NextPage = () => {
           work={
             [
               {
+                title:"Client Powered",
+                years:" Oct 2022 - Present",
+                position:"Second Developer", 
+                image:"/default.svg", 
+                wide:true,
+                points:
+                  [
+                    "Developed a CRM for Accountants that solved significant client relationship problems by automating client notifications, allowing firms to text their clients, and integrating with QuikBooks.",
+                    "Worked closely with the design team to develop a responsive and intuitive user interface using NextJS and Tailwind CSS, which enhanced user experience and increased engagement. Sole owner of all frontend implementation decisions.",
+                    "Co authored the design, layout, and UI/UX of the application with the team’s designer, working entirely asynchronously.",
+                    "Utilized AWS services to send automated notifications to clients, improving response times and reducing the need for manual intervention."
+                  ]
+              },
+              {
+                title:"SEO Tofu(Lead Flush)",
+                years:"Jan 2021 - June 2022",
+                position:"React Developer", 
+                image:"/default.svg", 
+                wide:true,
+                points:
+                  [
+                    "Built an application to feed top of the funnel leads to SEO companies. An SEO marketing agency can input a location and business type, at which point, our tool will scrape and display local companies who may be in the need of SEO services.",
+                    "Lead customer discovery phone calls and scoped out the front end look of the app. Participated in the lean startup framework to create a product that solves a considerable need for SEO and Marketing Agencies.",
+                    "Utilized the Google search API to scrape and relate websites and businesses, aggregating SEO data with business metadata providing valuable insights for our clients to improve their online presence.",
+                    "Implemented reusable React components, resulting in an increased conversion rate collaborating with the design team to ensure a seamless user experience."
+                  ]
+              },
+              {
                 title:"BC Centre for Disease Control",
                 years:"Jan 2019 - April 2019",
                 position:"Software Developer", 
