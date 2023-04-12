@@ -65,7 +65,7 @@ const Home: NextPage = () => {
           bio= {`Fascinated by the bleeding edge of technology, I am constantly seeking new ways to expand my knowledge and skills.
             After earning my Bachelor's degree in Computer Science and Microbiology and Biochemistry from Simon Fraser University, 
             I have gained experience working with React, cloud services, and blockchain technology. 
-            Recently, I have been particularly interested in AI image generation and am constantly seeking opportunities showcase my diverse 
+            Recently, I have been particularly interested in AI capabilities and am constantly seeking opportunities showcase my diverse 
             skill set.
             `}
           title={"Web Developer & Full Stack Engineer"}
@@ -284,7 +284,7 @@ const Home: NextPage = () => {
                 ]
               },
               {
-                link:"https://michael-gergely.vercel.app/",
+                link:"https://zelda-ten.vercel.app/",
                 project:"Zelda",
                 title:"Stack",
                 text:"React, Tailwind, Typescript, Javascript, NextJS for frontend, and Solana blockchain used as backend.",
@@ -298,7 +298,7 @@ const Home: NextPage = () => {
                 hoverColor:"hover:text-teal-400",
                 buttons:[
                   {text:"GitHub", link:"https://github.com/forgetscode/zelda"},
-                  {text:"Smart Contract", link:"https://github.com/forgetscode/sms/blob/main/programs/sms/src/lib.rs"},
+                  {text:"Smart Contract", link:"https://github.com/forgetscode/sms2/blob/main/programs/sms2/src/lib.rs"},
                   {text:"Video Demo", link:"https://www.youtube.com/watch?v=XKThYf5cnqk"},
                 ]
               },
