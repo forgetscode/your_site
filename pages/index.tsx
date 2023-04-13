@@ -303,6 +303,21 @@ const Home: NextPage = () => {
                 ]
               },
               {
+                link:"https://nextflix-bice-eight.vercel.app/",
+                project:"Nextflix",
+                title:"Stack",
+                text:"NodeJS, ExpressJS, PostrgeSQL, TypeORM, GraphQL, Apollo, Redis backend hosted on cloud service in Conjunction with Solana blockchain for programatic value transfer of job contracts. Typescript, React, Tailwind front end.",
+                description:`Nextflix is a clone of Netflix that utilizes server-side rendering to display movie data and uses Firebase as a backend service. 
+                Features included are the ability to play trailers for movies, search for movies, add movies to a watchlist, and upvote or downvote movies.
+                The site also integrates with Stripe payments through Firebase, allowing users to purchase subscription plans with the stripe development portal through a test credit card to unlock certain features. 
+                This project was created as a technical demo.`,
+                color:"text-red-500",
+                hoverColor:"hover:text-red-400",
+                buttons:[
+                  {text:"GitHub", link:"https://github.com/forgetscode/nextflix"},
+                ]
+              },
+              {
                 link:"https://forgetspractice.com/",
                 project:"Sosmo",
                 title:"Stack",
@@ -316,21 +331,6 @@ const Home: NextPage = () => {
                   {text:"GitHub", link:"https://github.com/forgetscode/sosmo"},
                   {text:"Smart Contract", link:"https://github.com/forgetscode/agreement/blob/main/programs/agreement/src/lib.rs"},
                   {text:"Video Demo", link:"https://www.youtube.com/watch?v=hCYLj3UGY08"},
-                ]
-              },
-              {
-                link:"https://nextflix-bice-eight.vercel.app/",
-                project:"Nextflix",
-                title:"Stack",
-                text:"NodeJS, ExpressJS, PostrgeSQL, TypeORM, GraphQL, Apollo, Redis backend hosted on cloud service in Conjunction with Solana blockchain for programatic value transfer of job contracts. Typescript, React, Tailwind front end.",
-                description:`Nextflix is a clone of Netflix that utilizes server-side rendering to display movie data and uses Firebase as a backend service. 
-                Features included are the ability to play trailers for movies, search for movies, add movies to a watchlist, and upvote or downvote movies.
-                The site also integrates with Stripe payments through Firebase, allowing users to purchase subscription plans with the stripe development portal through a test credit card to unlock certain features. 
-                This project was created as a technical demo.`,
-                color:"text-red-500",
-                hoverColor:"hover:text-red-400",
-                buttons:[
-                  {text:"GitHub", link:"https://github.com/forgetscode/nextflix"},
                 ]
               },
             ]
