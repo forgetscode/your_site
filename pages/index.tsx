@@ -315,7 +315,7 @@ const Home: NextPage = () => {
                 buttons:[
                   {text:"GitHub", link:"https://github.com/forgetscode/sosmo"},
                   {text:"Smart Contract", link:"https://github.com/forgetscode/agreement/blob/main/programs/agreement/src/lib.rs"},
-                  {text:"Video Demo", link:"https://www.youtube.com/watch?v=XKThYf5cnqk"},
+                  {text:"Video Demo", link:"https://www.youtube.com/watch?v=hCYLj3UGY08"},
                 ]
               },
               {
